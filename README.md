@@ -5,6 +5,17 @@
     ```git push origin tagName```
   - delete remote branch 
     ```git push origin --delete branchname```
+  - stop tracking a file/directory
+    ```shell
+    git rm [-r] --cached filename/[directoryname]
+    or
+    git update-index --assume-unchanged filename
+    ```
+  - HTTP github clone on Windows error with message ```error setting certificate verify locations```
+    ```shell
+    git config --system http.sslverify false # this would switch off the ssl verify
+    ```
+
 
 # DOS
   - check user info and group info
