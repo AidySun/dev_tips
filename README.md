@@ -8,8 +8,14 @@
 
 # DOS
   - check user info and group info
-    ``` net localgroup [groupname] 
-     net user username ```
+    ``` 
+    net localgroup [groupname] 
+    net user username 
+    ```
 
-  - create directory symbol link ``` mklink /D [to] [from] ```
-    ```/H``` is har link, ```/J``` creates a directory junction
+  - create directory symbol link 
+    ``` 
+    mklink /D [to] [from] 
+        /H *creats hard link*
+        /J *creates a directory junction*
+    ```
