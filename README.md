@@ -8,14 +8,14 @@
 
 # DOS
   - check user info and group info
-    ``` 
+    ``` bat
     net localgroup [groupname] 
     net user username 
     ```
 
   - create directory symbol link 
-    ``` 
+    ``` bat
     mklink /D [to] [from] 
-        /H *creats hard link*
-        /J *creates a directory junction*
+        /H  creats hard link
+        /J  creates a directory junction
     ```
