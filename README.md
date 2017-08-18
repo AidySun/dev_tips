@@ -2,6 +2,7 @@
 1. [Git](#git)
 2. [Windows](#windows)
 3. [macOS](#macos)
+4. [Markdown](#makdown)
 ------
 
 ## Git
@@ -48,4 +49,16 @@
     ```shell
     alias showFiles='defaults write com.apple.finder AppleShowAllFiles YES; killall Finder /System/Library/CoreServices/Finder.app'
     alias hideFiles='defaults write com.apple.finder AppleShowAllFiles NO; killall Finder /System/Library/CoreServices/Finder.app'
+    ```
+## Markdown
+  - adding TOC in markdown
+    ```markdown
+    # TOC
+    1. [Git](#git)
+    2. [Windows](#windows)
+    3. [macOS](#macos)
+    
+    ## Git
+    ## Windows
+    ## macOS
     ```
