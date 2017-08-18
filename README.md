@@ -2,7 +2,7 @@
 1. [Git](#git)
 2. [Windows](#windows)
 3. [macOS](#macos)
-4. [Markdown](#makdown)
+4. [Markdown](#markdown)
 ------
 
 ## Git
