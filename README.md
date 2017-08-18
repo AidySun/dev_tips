@@ -1,7 +1,7 @@
 # TOC
-1. [Git](#Git)
-2. [Windows](#Windows)
-3. [macOS](#macOS)
+1. [Git](#git)
+2. [Windows](#windows)
+3. [macOS](#macos)
 ------
 
 ## Git
