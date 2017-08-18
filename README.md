@@ -1,4 +1,10 @@
-# GIT
+# TOC
+1. [Git](#Git)
+2. [Windows](#Windows)
+3. [macOS](#macOS)
+------
+
+## Git
   - checkout one remoted branch to local 
     ```git checkout -b localBranch origin/remoteBranch```
   - push a tag 
@@ -17,7 +23,7 @@
     ```
 
 
-# DOS
+## Windows
   - check user info and group info
     ``` bat
     net localgroup [groupname] 
@@ -37,3 +43,9 @@
     * _**/savedcert** requires manually password input for the first run, logoff and login to make it work._
 
 
+## macOS
+  - show/hide hidden files and directories in Finder
+    ```shell
+    alias showFiles='defaults write com.apple.finder AppleShowAllFiles YES; killall Finder /System/Library/CoreServices/Finder.app'
+    alias hideFiles='defaults write com.apple.finder AppleShowAllFiles NO; killall Finder /System/Library/CoreServices/Finder.app'
+    ```
