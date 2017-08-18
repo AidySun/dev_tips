@@ -13,7 +13,7 @@
     ```
   - HTTP github clone on Windows error with message ```error setting certificate verify locations```
     ```shell
-    git config --system http.sslverify false # this would switch off the ssl verify
+    git config --system http.sslverify false   # this will switch off the ssl verify for ALL http connections
     ```
 
 
