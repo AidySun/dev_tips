@@ -22,6 +22,10 @@
     ```shell
     git config --system http.sslverify false   # this will switch off the ssl verify for ALL http connections
     ```
+  - set upstream to avoid inputing [origin master] for each push
+    ```git
+    git push --set-upstream origin master
+    ```
 
 
 ## Windows
@@ -50,6 +54,7 @@
     alias showFiles='defaults write com.apple.finder AppleShowAllFiles YES; killall Finder /System/Library/CoreServices/Finder.app'
     alias hideFiles='defaults write com.apple.finder AppleShowAllFiles NO; killall Finder /System/Library/CoreServices/Finder.app'
     ```
+
 ## Markdown
   - adding TOC in markdown
     ```markdown
