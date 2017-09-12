@@ -26,6 +26,16 @@
     ```git
     git push --set-upstream origin master
     ```
+  - checkout or pull a folder/file instead of the whole repository
+    ```
+    mkdir myrepo
+    cd myrepo
+    git init
+    git remote add -f origin github/aidysun/repo.git
+    git config core.sparseCheckout true
+    echo "folder_a/" >> .git/info/sparse-checkout
+    git pull
+    ```
 
 
 ## Windows
