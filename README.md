@@ -86,7 +86,7 @@
 
 
 ## Shell
-  - Turn ANSI color in Terminal, add following lines in *~/.profile*
+  - Turn on ANSI color in Terminal, add following lines in *~/.profile*
     ```
     export CLICOLOR=1
     export LSCOLORS=GxFxCxDxBxegedabagaced
