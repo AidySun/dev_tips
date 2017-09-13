@@ -3,6 +3,7 @@
 2. [Windows](#windows)
 3. [macOS](#macos)
 4. [Markdown](#markdown)
+5. [Shell](#shell)
 ------
 
 ## Git
@@ -82,3 +83,14 @@
     ## Windows
     ## macOS
     ```
+
+
+## Shell
+  - Turn ANSI color in Terminal, add following lines in *~/.profile*
+    ```
+    export CLICOLOR=1
+    export LSCOLORS=GxFxCxDxBxegedabagaced
+    ```
+  - ``` export PS1="\n\e[32m\w \e[33m\t \e[36m$ \e[0m" ```
+
+
