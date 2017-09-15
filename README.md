@@ -4,6 +4,7 @@
 3. [macOS](#macos)
 4. [Markdown](#markdown)
 5. [Shell](#shell)
+6. [Vim](#vim)
 ------
 
 ## Git
@@ -92,5 +93,21 @@
     export LSCOLORS=GxFxCxDxBxegedabagaced
     ```
   - ``` export PS1="\n\e[32m\w \e[33m\t \e[36m$ \e[0m" ```
+
+
+## Vim
+  - Adjust the splited window size
+    ```
+    :ctr+w _ " max height
+    :ctr+w | " max width
+    :ctr+w = " equal size
+    ```
+  - Open multiple files with splited windows
+  - Scroll screen without changing cursor
+  ```
+  zz " move current line to middle of screen
+  zt " move current line to top of screen
+  zb " move current line to bottom of screen
+  ```
 
 
