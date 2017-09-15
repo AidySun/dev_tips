@@ -103,11 +103,12 @@
     :ctr+w = " equal size
     ```
   - Open multiple files with splited windows
+    ```$ vim -o[O] file1 file2 ...```
   - Scroll screen without changing cursor
-  ```
-  zz " move current line to middle of screen
-  zt " move current line to top of screen
-  zb " move current line to bottom of screen
-  ```
+    ```
+    zz " move current line to middle of screen
+    zt " move current line to top of screen
+    zb " move current line to bottom of screen
+    ```
 
 
