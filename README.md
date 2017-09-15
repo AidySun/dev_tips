@@ -110,5 +110,13 @@
     zt " move current line to top of screen
     zb " move current line to bottom of screen
     ```
+  - others
+    ```
+    .        " repeat last action
+    :e!      " resotre to doc origin
+    I        " insert at first non-space
+    A        " insert at end of the line
+    :n1,n2 w [filename]    " save lines n1~n2 as 
+    ```
 
 
