@@ -38,6 +38,8 @@
     echo "folder_a/" >> .git/info/sparse-checkout
     git pull
     ```
+  - roll back specific file
+    ```git checkout <commit> -- path/to/file```
 
 
 ## Windows
