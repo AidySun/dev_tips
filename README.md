@@ -42,6 +42,7 @@
     ```git checkout <commit> -- path/to/file```
 
 
+
 ## Windows
   - check user info and group info
     ``` bat
@@ -95,6 +96,8 @@
     export LSCOLORS=GxFxCxDxBxegedabagaced
     ```
   - ``` export PS1="\n\e[32m\w \e[33m\t \e[36m$ \e[0m" ```
+  - copy files to local system via SSH
+    ```scp -r username@10.1.1.1:~/Downloads/folder ~/Downloads```
 
 
 ## Vim
