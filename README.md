@@ -108,6 +108,14 @@
   - copy files to local system via SSH
     ```scp -r username@10.1.1.1:~/Downloads/folder ~/Downloads```
 
+  - rename files/folders with regex replacement
+    ```
+    # rename files contain "2017" to be "2018" 
+    for f in *; do echo  mv "$f" "${f/2017/2018}"; done
+    # remove echo to do the real renaming
+    ```
+
+
 
 ## Vim
   - Adjust the splited window size
