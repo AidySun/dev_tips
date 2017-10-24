@@ -41,6 +41,15 @@
   - roll back specific file
     ```git checkout <commit> -- path/to/file```
 
+  - rollback a specific history commit
+    - ```git reset``` is used to undo all commits that came afterwards
+    - ```git revert``` undo the effects of only a certain commit
+  - show history and diff with file names
+    ```
+    git log --stat --oneline
+    git diff --name-only
+    ```
+
 
 
 ## Windows
