@@ -49,6 +49,11 @@
     git log --stat --oneline
     git diff --name-only
     ```
+    
+  - unstage a file, won't delete from local workspace
+    ```
+    git rm --cached <file>
+    ```
 
 
 
