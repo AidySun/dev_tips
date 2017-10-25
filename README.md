@@ -20,7 +20,7 @@
     or
     git update-index --assume-unchanged filename
     ```
-  - HTTP github clone on Windows error with message ```error setting certificate verify locations```
+  - HTTP github clone on Windows error with message `error setting certificate verify locations`
     ```shell
     git config --system http.sslverify false   # this will switch off the ssl verify for ALL http connections
     ```
@@ -42,8 +42,8 @@
     ```git checkout <commit> -- path/to/file```
 
   - rollback a specific history commit
-    - ```git reset``` is used to undo all commits that came afterwards
-    - ```git revert``` undo the effects of only a certain commit
+    - `git reset` is used to undo all commits that came afterwards
+    - `git revert` undo the effects of only a certain commit
   - show history and diff with file names
     ```
     git log --stat --oneline
@@ -52,8 +52,14 @@
     
   - unstage a file, won't delete from local workspace
     ```
-    git rm --cached <file>
+    git reset -- <file>
     ```
+    <pre><code>
+    # this won't actually unstage a file, it just works for the new files that staged.
+    # it stages the removal file from the repo but leaves the file in your working tree
+    <del>git rm --cached <file></del></code></pre>
+    
+    
 
 
 
