@@ -58,6 +58,15 @@
     # this won't actually unstage a file, it just works for the new files that staged.
     # it stages the removal file from the repo but leaves the file in your working tree
     <del>git rm --cached <file></del></code></pre>
+  - rename a tag
+    ```
+    git tag new_tag old_tag
+    git tag -d old_tag
+    git push origin :refs/tags/old_tag  # this delete tag remotely, another way is git push --delete origin old_tag
+    git pusl --tags
+    # other to get the new tags
+    git pull --purne --tags
+    ```
     
     
 
