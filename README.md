@@ -134,6 +134,11 @@
     for f in *; do echo  mv "$f" "${f/2017/2018}"; done
     # remove echo to do the real renaming
     ```
+  - default parameter value
+    ```
+    set var1 = ${1:-default} # set var1 to be 'default' if $1 is not set
+    set var2 = ${VARIABLE2:-empty} # set var2 to be 'empty' if $VARIABLE2 is not set
+    ```
 
 
 
