@@ -63,7 +63,7 @@
     git tag new_tag old_tag
     git tag -d old_tag
     git push origin :refs/tags/old_tag  # this delete tag remotely, another way is git push --delete origin old_tag
-    git pusl --tags
+    git push --tags
     # other to get the new tags
     git pull --purne --tags
     ```
