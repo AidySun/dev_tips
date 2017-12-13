@@ -5,6 +5,7 @@
 4. [Markdown](#markdown)
 5. [Shell](#shell)
 6. [Vim](#vim)
+7. [Xcode](#xcode)
 ------
 
 ## Git
@@ -167,3 +168,10 @@
     ```
 
 
+## Xcode
+
+  - using older SDK in newer Xcode
+  
+      - clone specific version of macOS SDK from `https://github.com/phracker/MacOSX-SDKs`
+      - place the SDK in Xcode.app
+      - (Xcode 7.3+) edit `MinimumSDKVersion` in `/Applications/Xcode.app/Content/Developer/Platforms/MacOSX.platform/Info.plist`
