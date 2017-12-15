@@ -104,7 +104,9 @@
     find . -iname 'xc*data' -exec git rm -r --cached {} \;
     ```
   - screen sharing stop working on 10.11
-    `sudo /System/Library/CoreServices/RemoteManagement/ARDAgent.app/Contents/Resources/kickstart -activate -configure -access -on -restart -agent -privs -all`
+    ```
+    sudo /System/Library/CoreServices/RemoteManagement/ARDAgent.app/Contents/Resources/kickstart -activate -configure -access -on -restart -agent -privs -all
+    ```
     
 ## Markdown
   - adding TOC in markdown
