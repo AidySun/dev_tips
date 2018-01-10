@@ -68,8 +68,7 @@
     # other to get the new tags
     git pull --purne --tags
     ```
-  - show branch name in bash command prompt
-    <a name="show_branch_name_in_bash_command_prompt"/>
+  - <a name="show_branch_name_in_bash_command_prompt">show branch name in bash command prompt </a>
     ```
     function git_branch() {
         git branch 2>/dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
