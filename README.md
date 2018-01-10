@@ -68,9 +68,15 @@
     # other to get the new tags
     git pull --purne --tags
     ```
-    
-    
+  - show branch name in bash command prompt
+    <a name="show_branch_name_in_bash_command_prompt"/>
+    ```
+    function git_branch() {
+        git branch 2>/dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
+    }
 
+    export PS1="\n\e[32m\w \$(git_branch)  \e[33m\t \e[36m$ \e[0m"
+    ```
 
 
 ## Windows
@@ -129,6 +135,9 @@
     export LSCOLORS=GxFxCxDxBxegedabagaced
     ```
   - ``` export PS1="\n\e[32m\w \e[33m\t \e[36m$ \e[0m" ```
+
+  - [show branch name in bash command prompt](#show_branch_name_in_bash_command_prompt)
+
   - copy files to local system via SSH
     ```scp -r username@10.1.1.1:~/Downloads/folder ~/Downloads```
 
