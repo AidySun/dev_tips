@@ -126,6 +126,13 @@
     ## macOS
     ```
 
+  - bookmark
+    ```
+    <a name="link_name">content to show</a>
+    ...
+    [reference](#link_name)
+    ```
+
 
 ## Shell
   - Turn on ANSI color in Terminal, add following lines in *~/.profile*
