@@ -69,6 +69,10 @@
     git pull --purne --tags
     ```
   - [show branch name in bash command prompt](#show_branch_name_in_bash_command_prompt)
+  - update sub modules to latest
+    ```
+    git submodule update --init --recursive --remote
+    ```
 
 
 ## Windows
