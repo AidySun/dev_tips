@@ -68,6 +68,12 @@
     # other to get the new tags
     git pull --purne --tags
     ```
+  - merge/checkout files from another branch
+    ```
+    # current branch master
+    git checkout another_branch ./file1 ./file2
+    ```
+    
   - [show branch name in bash command prompt](#show_branch_name_in_bash_command_prompt)
   - update sub modules to latest
     ```
