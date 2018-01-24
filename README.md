@@ -54,7 +54,7 @@
 
   - rollback a specific history commit
     - `git revert` undo the effects of only a certain commit
-    - `git reset` is used to undo all commits that came afterwards
+    - `git reset` is used to **undo/delete all commits** that came afterwards
       ```
       # rollback to <commit> and force push, ** histories will be deleted in log as well **
       git reset --hard <commit>
