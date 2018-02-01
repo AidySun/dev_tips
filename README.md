@@ -94,6 +94,7 @@
     ```
     git submodule update --init --recursive --remote
     ```
+  - [Splitting a subfolder out into a new repository](https://help.github.com/articles/splitting-a-subfolder-out-into-a-new-repository/)    
 
 
 ## Windows
