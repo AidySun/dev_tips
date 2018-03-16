@@ -9,15 +9,15 @@
 ------
 
 ## Git
-  - checkout one remoted branch to local 
+  - checkout one remote branch to local 
     ```git checkout -b localBranch origin/remoteBranch```
   - push a tag 
     ```git push origin tagName```
   - delete remote branch 
-    ```git push origin --delete branchname```
+    ```git push origin --delete branch_name```
   - stop tracking a file/directory
     ```shell
-    git rm [-r] --cached filename/[directoryname]
+    git rm [-r] --cached filename/[directory_name]
     or
     git update-index --assume-unchanged filename
     ```
@@ -66,12 +66,12 @@
     git diff --name-only
     ```
     
-  - unstage a file, won't delete from local workspace
+  - un-stage a file, won't delete from local workspace
     ```
     git reset -- <file>
     ```
     <pre><code>
-    # this won't actually unstage a file, it just works for the new files that staged.
+    # this won't actually un-stage a file, it just works for the new files that staged.
     # it stages the removal file from the repo but leaves the file in your working tree
     <del>git rm --cached <file></del></code></pre>
   - rename a tag
@@ -107,7 +107,7 @@
   - create directory symbol link 
     ``` bat
     mklink /D [to] [from] 
-        /H  creats hard link
+        /H  creates hard link
         /J  creates a directory junction
     ```
   - run as user
@@ -115,7 +115,7 @@
     runas /user:%USERDOMAIN%\%USERNAME% /savedcert "mklink /D C:/folder D:/folder"
     ```
     * _**/savedcert** requires manually password input for the first run, logoff and login to make it work._
-  - check archetecture(x86 x64) of DLL
+  - check architecture(x86 x64) of DLL
     ```bat
     REM run in Visual Studio Command Prompt
     dumpbin /HEADERS <your.dll> | more
@@ -190,13 +190,13 @@
 
 
 ## Vim
-  - Adjust the splited window size
+  - Adjust the split window size
     ```
     :ctr+w _ " max height
     :ctr+w | " max width
     :ctr+w = " equal size
     ```
-  - Open multiple files with splited windows
+  - Open multiple files with split windows
     ```$ vim -o[O] file1 file2 ...```
   - Scroll screen without changing cursor
     ```
@@ -207,7 +207,7 @@
   - others
     ```
     .        " repeat last action
-    :e!      " resotre to doc origin
+    :e!      " restore to doc origin
     I        " insert at first non-space
     A        " insert at end of the line
     :n1,n2 w [filename]    " save lines n1~n2 as 
