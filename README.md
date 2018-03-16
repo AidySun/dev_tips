@@ -5,14 +5,11 @@
 4. [Markdown](#markdown)
 5. [Shell](#shell)
 6. [Vim](#vim)
-7. [Xcode](#xcode)
 ------
 
 ## Git
   - checkout one remote branch to local 
     ```git checkout -b localBranch origin/remoteBranch```
-  - push a tag 
-    ```git push origin tagName```
   - delete remote branch 
     ```git push origin --delete branch_name```
   - stop tracking a file/directory
@@ -24,10 +21,6 @@
   - HTTP github clone on Windows error with message `error setting certificate verify locations`
     ```shell
     git config --system http.sslverify false   # this will switch off the ssl verify for ALL http connections
-    ```
-  - set upstream to avoid inputing [origin master] for each push
-    ```git
-    git push --set-upstream origin master
     ```
   - checkout or pull a folder/file instead of the whole repository
     ```
@@ -213,11 +206,3 @@
     :n1,n2 w [filename]    " save lines n1~n2 as 
     ```
 
-
-## Xcode
-
-  - using older SDK in newer Xcode
-  
-      - clone specific version of macOS SDK from `https://github.com/phracker/MacOSX-SDKs`
-      - place the SDK in Xcode.app
-      - (Xcode 7.3+) edit `MinimumSDKVersion` in `/Applications/Xcode.app/Content/Developer/Platforms/MacOSX.platform/Info.plist`
