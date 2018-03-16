@@ -115,7 +115,7 @@
     runas /user:%USERDOMAIN%\%USERNAME% /savedcert "mklink /D C:/folder D:/folder"
     ```
     * _**/savedcert** requires manually password input for the first run, logoff and login to make it work._
-  - check archetecture of DLL
+  - check archetecture(x86 x64) of DLL
     ```bat
     REM run in Visual Studio Command Prompt
     dumpbin /HEADERS <your.dll> | more
