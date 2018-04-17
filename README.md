@@ -5,6 +5,7 @@
 4. [Markdown](#markdown)
 5. [Shell](#shell)
 6. [Vim](#vim)
+7. [Jupyter](#jupyter)
 ------
 
 ## Git
@@ -206,3 +207,11 @@
     :n1,n2 w [filename]    " save lines n1~n2 as 
     ```
 
+
+## Jupyter
+  - install packages in notebook
+    ```
+    import sys
+    !conda install pip
+    !python -m pip install keras
+    ```
