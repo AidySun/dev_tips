@@ -180,6 +180,16 @@
     set var1 = ${1:-default} # set var1 to be 'default' if $1 is not set
     set var2 = ${VARIABLE2:-empty} # set var2 to be 'empty' if $VARIABLE2 is not set
     ```
+  - auto input for prompt/password
+    ```
+    expect <<- DONE
+    spawn scp $1 user@192.168.1.1:/work/
+    expect "password:"
+    send -- "mypassword\r"
+    #interactive
+    expect eof
+    DONE
+    ```
 
 
 
