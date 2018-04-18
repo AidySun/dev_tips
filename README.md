@@ -5,7 +5,7 @@
 4. [Markdown](#markdown)
 5. [Shell](#shell)
 6. [Vim](#vim)
-7. [Jupyter](#jupyter)
+7. [Python](#python)
 ------
 
 ## Git
@@ -218,10 +218,13 @@
     ```
 
 
-## Jupyter
-  - install packages in notebook
+## Python
+  - Install packages in notebook
     ```
     import sys
     !conda install pip
     !python -m pip install keras
     ```
+  - Location of installed package
+    `pip show <package_name>`
+
