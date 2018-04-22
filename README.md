@@ -219,12 +219,14 @@
 
 
 ## Python
-  - Install packages in notebook
+  - Install packages in Jupyter Notebook
     ```
     import sys
     !conda install pip
     !python -m pip install keras
     ```
-  - Location of installed package
+  - Location of installed package: 
     `pip show <package_name>`
+  - Installed packages: 
+    `pip list`
 
