@@ -233,9 +233,7 @@
 
 ## Chrome
   - Download CRX extension
-    <code>
-    https://clients2.google.com/service/update2/crx?response=redirect&prodversion=[PRODVERSION]&x=id%3D[EXTENSIONID]%26uc
-    </code>
-    - [PRODVERSION] is the version of Chrome, which must be 31.0.1609.0 at the very least
-    - [EXTENSIONID] is the ID of the extension
+    - https://clients2.google.com/service/update2/crx?response=redirect&prodversion=[PRODVERSION]&x=id%3D[EXTENSIONID]%26uc
+      - [PRODVERSION] is the version of Chrome, which must be 31.0.1609.0 at the very least
+      - [EXTENSIONID] is the ID of the extension
 
