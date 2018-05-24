@@ -93,6 +93,8 @@
 
 
 ## Windows
+  - Disable Hibernate to free up disk space
+    - `powercfg -h off`
   - check user info and group info
     ``` bat
     net localgroup [groupname] 
