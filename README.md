@@ -6,6 +6,7 @@
 5. [Shell](#shell)
 6. [Vim](#vim)
 7. [Python](#python)
+8. [Chrome](#chrome)
 ------
 
 ## Git
@@ -229,4 +230,12 @@
     `pip show <package_name>`
   - Installed packages: 
     `pip list`
+
+## Chrome
+  - Download CRX extension
+    <code>
+    https://clients2.google.com/service/update2/crx?response=redirect&prodversion=[PRODVERSION]&x=id%3D[EXTENSIONID]%26uc
+    </code>
+    - [PRODVERSION] is the version of Chrome, which must be 31.0.1609.0 at the very least
+    - [EXTENSIONID] is the ID of the extension
 
