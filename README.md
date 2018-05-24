@@ -91,6 +91,11 @@
     ```
   - [Splitting a subfolder out into a new repository](https://help.github.com/articles/splitting-a-subfolder-out-into-a-new-repository/)    
 
+  - "refusing to merge unrelated histories”
+    - `git pull origin master --allow-unrelated-histories`
+
+
+
 
 ## Windows
   - Disable Hibernate to free up disk space
