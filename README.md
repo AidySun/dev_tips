@@ -10,6 +10,12 @@
 ------
 
 ## Git
+  - git stashing
+    ```
+    git stash
+    git stash list
+    git stash pop
+    ```
   - checkout one remote branch to local 
     ```git checkout -b localBranch origin/remoteBranch```
   - delete remote branch 
@@ -224,8 +230,6 @@
     A        " insert at end of the line
     :n1,n2 w [filename]    " save lines n1~n2 as 
     ```
-
-
 ## Python
   - Install packages in Jupyter Notebook
     ```
@@ -238,6 +242,12 @@
   - Installed packages: 
     `pip list`
 
+  - platform
+    ```
+    import platform
+    print(platfrom.platform())
+    print(platfrom.python_version())
+    ```
 ## Chrome
   - Download CRX extension
     - https://clients2.google.com/service/update2/crx?response=redirect&prodversion=[PRODVERSION]&x=id%3D[EXTENSIONID]%26uc
