@@ -144,6 +144,11 @@
     sudo /System/Library/CoreServices/RemoteManagement/ARDAgent.app/Contents/Resources/kickstart -activate -configure -access -on -restart -agent -privs -all
     ```
     
+  - list exported symbols of shared library
+    ```shell
+    nm -a log4cplus
+    ```
+
 ## Markdown
   - adding TOC in markdown
     ```markdown
