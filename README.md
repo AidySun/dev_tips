@@ -8,6 +8,7 @@
 7. [Python](#python)
 8. [Chrome](#chrome)
 9. [Ubuntu](#ubuntu)
+10.[Java](#java)
 
 ------
 
@@ -266,5 +267,13 @@
     ```
     apt list --installed
     dpkg --get-selections
+    ```
+## Java
+  - JVM status check
+    ```
+    jps -v
+    jstat -gc <jvmid>
+    jmap -heap <jvmid>
+    jmap -histo:live <jvmid> | more
     ```
 
