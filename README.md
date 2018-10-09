@@ -13,8 +13,18 @@
 ------
 
 ## Git
-  - git stashing
+  - merge multiple commits into one
+    ```shell
+    # approach 1
+    git reset --soft HEAD~n
+    git commit --amend
+
+    # approach 2
+    git rebace --interactive HEAD~n
+    # then should pick ealy commit and squash later commit
     ```
+  - git stashing
+    ```shell
     git stash
     git stash list
     git stash pop
@@ -34,7 +44,7 @@
     git config --system http.sslverify false   # this will switch off the ssl verify for ALL http connections
     ```
   - checkout or pull a folder/file instead of the whole repository
-    ```
+    ```shell
     mkdir myrepo
     cd myrepo
     git init
@@ -44,7 +54,7 @@
     git pull
     ```
   - roll back specific file
-    ```
+    ```shell
     # undeleted files
     git checkout <commit> -- path/to/file
 
@@ -59,7 +69,7 @@
   - rollback a specific history commit
     - `git revert` undo the effects of only a certain commit
     - `git reset` is used to **undo/delete all commits** that came afterwards
-      ```
+      ```shell
       # rollback to <commit> and force push, ** histories will be deleted in log as well **
       git reset --hard <commit>
       git push origin master --force
@@ -79,7 +89,7 @@
     # it stages the removal file from the repo but leaves the file in your working tree
     <del>git rm --cached <file></del></code></pre>
   - rename a tag
-    ```
+    ```shell
     git tag new_tag old_tag
     git tag -d old_tag
     git push origin :refs/tags/old_tag  # this delete tag remotely, another way is git push --delete origin old_tag
@@ -88,14 +98,14 @@
     git pull --purne --tags
     ```
   - merge/checkout files from another branch
-    ```
+    ```shell
     # current branch master
     git checkout another_branch ./file1 ./file2
     ```
     
   - [show branch name in bash command prompt](#show_branch_name_in_bash_command_prompt)
   - update [submodules](https://git-scm.com/book/en/v2/Git-Tools-Submodules) to latest 
-    ```
+    ```shell
     git submodule update --init --recursive --remote
     ```
   - [Splitting a subfolder out into a new repository](https://help.github.com/articles/splitting-a-subfolder-out-into-a-new-repository/)    
@@ -110,13 +120,13 @@
   - Disable Hibernate to free up disk space
     - `powercfg -h off`
   - check user info and group info
-    ``` bat
+    ```bat
     net localgroup [groupname] 
     net user username 
     ```
 
   - create directory symbol link 
-    ``` bat
+    ```bat
     mklink /D [to] [from] 
         /H  creates hard link
         /J  creates a directory junction
@@ -143,7 +153,7 @@
     find . -iname 'xc*data' -exec git rm -r --cached {} \;
     ```
   - screen sharing stop working on 10.11
-    ```
+    ```shell
     sudo /System/Library/CoreServices/RemoteManagement/ARDAgent.app/Contents/Resources/kickstart -activate -configure -access -on -restart -agent -privs -all
     ```
     
@@ -175,12 +185,12 @@
 
 ## Shell
   - Turn on ANSI color in Terminal, add following lines in *~/.profile*
-    ```
+    ```shell
     export CLICOLOR=1
     export LSCOLORS=GxFxCxDxBxegedabagaced
     ```
   - <a name="show_branch_name_in_bash_command_prompt">show branch name in bash command prompt </a>
-    ```
+    ```shell
     function git_branch() {
         git branch 2>/dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
     }
@@ -192,18 +202,18 @@
     ```scp -r username@10.1.1.1:~/Downloads/folder ~/Downloads```
 
   - rename files/folders with regex replacement
-    ```
+    ```shell
     # rename files contain "2017" to be "2018" 
     for f in *; do echo  mv "$f" "${f/2017/2018}"; done
     # remove echo to do the real renaming
     ```
   - default parameter value
-    ```
+    ```shell
     set var1 = ${1:-default} # set var1 to be 'default' if $1 is not set
     set var2 = ${VARIABLE2:-empty} # set var2 to be 'empty' if $VARIABLE2 is not set
     ```
   - auto input for prompt/password
-    ```
+    ```shell
     expect <<- DONE
     spawn scp $1 user@192.168.1.1:/work/
     expect "password:"
