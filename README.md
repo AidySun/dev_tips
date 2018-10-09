@@ -8,7 +8,7 @@
 7. [Python](#python)
 8. [Chrome](#chrome)
 9. [Ubuntu](#ubuntu)
-10.[Java](#java)
+10. [Java](#java)
 
 ------
 
