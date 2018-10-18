@@ -112,6 +112,10 @@
 
   - "refusing to merge unrelated histories”
     - `git pull origin master --allow-unrelated-histories`
+  - rename file sensitively on Windows
+    ```shell
+    git mv -f Myfile myfile
+    ```
 
 
 
