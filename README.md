@@ -13,6 +13,11 @@
 ------
 
 ## Git
+  - force overwrite local untracked files
+    ```shell
+    git fetch --all
+    git reset --hard origin/master
+    ```
   - merge multiple commits into one
     ```shell
     # approach 1
