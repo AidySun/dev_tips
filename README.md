@@ -171,9 +171,9 @@
     nm -a log4cplus
     ```
   - Show build settings of Xcode projects
-  ```shell
-  xcodebuild -project myProj.xcodeproj -target "Release_Cocoa64" -showBuildSettings
-  ```
+    ```shell
+    xcodebuild -project myProj.xcodeproj -target "Release_Cocoa64" -showBuildSettings
+    ```
 
 ## Markdown
   - adding TOC in markdown
