@@ -174,6 +174,12 @@
     ```shell
     xcodebuild -project myProj.xcodeproj -target "Release_Cocoa64" -showBuildSettings
     ```
+  - Quick Look or Preview text files in Finder
+    ```shell
+    # e.g. xml files
+    sudo  find . -name *.xml -exec SetFile -t TEXT {} ; 
+    # alternative https://github.com/sindresorhus/quick-look-plugins?? not tried 
+    ```
 
 ## Markdown
   - adding TOC in markdown
