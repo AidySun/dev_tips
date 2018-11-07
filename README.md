@@ -200,6 +200,7 @@
     ...
     [reference](#link_name)
     ```
+  - [Paste to Markdown](http://euangoddard.github.io/clipboard2markdown/)
 
 
 ## Shell
