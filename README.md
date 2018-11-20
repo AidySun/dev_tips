@@ -204,6 +204,10 @@
 
 
 ## Shell
+  - capture command output to file while alos viewing it live [more](https://askubuntu.com/a/731237)
+    ```shell
+    command |& tee file.txt
+    ```
   - Turn on ANSI color in Terminal, add following lines in *~/.profile*
     ```shell
     export CLICOLOR=1
