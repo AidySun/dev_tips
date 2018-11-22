@@ -180,6 +180,9 @@
     sudo  find . -name *.xml -exec SetFile -t TEXT {} ; 
     # alternative https://github.com/sindresorhus/quick-look-plugins?? not tried 
     ```
+  - Cannot find dylib files when adding links in Xcode?
+    - [Using Other Linker Flags instead of selecting](https://stackoverflow.com/questions/32576979/libiconv-dylib-not-found-in-xcode-7-gm), e.g. `-liconv` instead of `libiconv.dylib`
+    - As well as system frameworks (e.g. `-framework IOKit`)
 
 ## Markdown
   - adding TOC in markdown
