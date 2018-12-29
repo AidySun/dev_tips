@@ -315,4 +315,9 @@
     jmap -heap <jvmid>
     jmap -histo:live <jvmid> | more
     ```
+  - Eclipse cannot connect to Marketplace (from China)
+    * add following content to `eclipse.ini`
+    ```
+    -Djava.net.preferIPv4Stack=true 
+    ```
 
