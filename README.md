@@ -152,6 +152,10 @@
     REM run in Visual Studio Command Prompt
     dumpbin /HEADERS <your.dll> | more
     ```
+  - Windows equivalent of `wc -l` in Batch, `find /c /v ""`
+    ```bat
+    keytool -list | find /c /v ""
+    ```
 
 ## macOS
   - show/hide hidden files and directories in Finder
