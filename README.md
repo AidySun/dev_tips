@@ -30,6 +30,13 @@
     git rebace --interactive HEAD~n
     # then should pick ealy commit and squash later commit
     ```
+  - edit committed message which is NOT pushed yet
+    ```shell
+    git rebase --interactive HEAD~1    # last one
+    # change pick to be 'edit'
+    git rebase --amend
+    git rebase --continue
+    ```
   - git stashing
     ```shell
     git stash
@@ -158,6 +165,10 @@
     ```
 
 ## macOS
+  - lockscreen using command
+    ```shell
+    /System/Library/CoreServices//Menu\ Extras/User.menu/Contents/Resources/CGSession -suspend
+    ```
   - show/hide hidden files and directories in Finder
     ```shell
     alias showFiles='defaults write com.apple.finder AppleShowAllFiles YES; killall Finder /System/Library/CoreServices/Finder.app'
