@@ -270,6 +270,18 @@
 
 
 ## Vim
+  - Key mappings
+    ```
+    // imap: insert mode, <c-d>:ctr+d, <esc>ddi: key in order 
+    :map - x
+    :imap <c-d> <esc>ddi
+    :let mapleader = "-"
+    :vmap <leader>\ U
+    // no remap
+    :inoremap <c-d>
+    // unmap
+    :nunmap -
+    ```
   - Adjust the split window size
     ```
     :ctr+w _ " max height
