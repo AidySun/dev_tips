@@ -1,14 +1,19 @@
 # TOC
+
+<!-- MarkdownTOC levels="2" autolink="true" style="ordered" -->
+
 1. [Git](#git)
-2. [Windows](#windows)
-3. [macOS](#macos)
-4. [Markdown](#markdown)
-5. [Shell](#shell)
-6. [Vim](#vim)
-7. [Python](#python)
-8. [Chrome](#chrome)
-9. [Ubuntu](#ubuntu)
-10. [Java](#java)
+1. [Windows](#windows)
+1. [macOS](#macos)
+1. [Markdown](#markdown)
+1. [Shell](#shell)
+1. [Vim](#vim)
+1. [Python](#python)
+1. [Chrome](#chrome)
+1. [Ubuntu](#ubuntu)
+1. [Java](#java)
+
+<!-- /MarkdownTOC -->
 
 ------
 
@@ -37,26 +42,24 @@
     git rebase --amend
     git rebase --continue
     ```
-  - git stashing
-    ```shell
-    git stash
-    git stash list
-    git stash pop
-    ```
   - checkout one remote branch to local 
     ```git checkout -b localBranch origin/remoteBranch```
+
   - delete remote branch 
     ```git push origin --delete branch_name```
+
   - stop tracking a file/directory
     ```shell
     git rm [-r] --cached filename/[directory_name]
     or
     git update-index --assume-unchanged filename
     ```
+
   - HTTP github clone on Windows error with message `error setting certificate verify locations`
     ```shell
     git config --system http.sslverify false   # this will switch off the ssl verify for ALL http connections
     ```
+
   - checkout or pull a folder/file instead of the whole repository
     ```shell
     mkdir myrepo
@@ -67,6 +70,7 @@
     echo "folder_a/" >> .git/info/sparse-checkout
     git pull
     ```
+
   - roll back specific file
     ```shell
     # undeleted files
@@ -88,6 +92,7 @@
       git reset --hard <commit>
       git push origin master --force
       ```
+
   - show history and diff with file names
     ```
     git log --stat --oneline
@@ -102,6 +107,7 @@
     # this won't actually un-stage a file, it just works for the new files that staged.
     # it stages the removal file from the repo but leaves the file in your working tree
     <del>git rm --cached <file></del></code></pre>
+
   - rename a tag
     ```shell
     git tag new_tag old_tag
@@ -130,8 +136,6 @@
     ```shell
     git mv -f Myfile myfile
     ```
-
-
 
 
 ## Windows
@@ -178,10 +182,6 @@
     ```shell
     find . -iname 'xc*data' -exec git rm -r --cached {} \;
     ```
-  - screen sharing stop working on 10.11
-    ```shell
-    sudo /System/Library/CoreServices/RemoteManagement/ARDAgent.app/Contents/Resources/kickstart -activate -configure -access -on -restart -agent -privs -all
-    ```
     
   - list exported symbols of shared library
     ```shell
@@ -202,25 +202,16 @@
     - As well as system frameworks (e.g. `-framework IOKit`)
 
 ## Markdown
-  - adding TOC in markdown
-    ```markdown
-    # TOC
-    1. [Git](#git)
-    2. [Windows](#windows)
-    3. [macOS](#macos)
-    
-    ## Git
-    ## Windows
-    ## macOS
-    ```
+- adding TOC in markdown
+  [](https://github.com/naokazuterada/MarkdownTOC)
 
-  - bookmark
-    ```
-    <a name="link_name">content to show</a>
-    ...
-    [reference](#link_name)
-    ```
-  - [Paste to Markdown](http://euangoddard.github.io/clipboard2markdown/)
+- bookmark
+  ```
+  <a name="link_name">content to show</a>
+  ...
+  [reference](#link_name)
+  ```
+- [Paste to Markdown](http://euangoddard.github.io/clipboard2markdown/)
 
 
 ## Shell
@@ -256,6 +247,13 @@
     set var1 = ${1:-default} # set var1 to be 'default' if $1 is not set
     set var2 = ${VARIABLE2:-empty} # set var2 to be 'empty' if $VARIABLE2 is not set
     ```
+
+  - prompt for user input
+    ```shell
+    read -p "input a word: " inputtedVar
+    echo $inputtedVar
+    ```
+
   - auto input for prompt/password
     ```shell
     expect <<- DONE
@@ -304,6 +302,7 @@
     A        " insert at end of the line
     :n1,n2 w [filename]    " save lines n1~n2 as 
     ```
+
 ## Python
   - Install packages in Jupyter Notebook
     ```
@@ -322,6 +321,7 @@
     print(platfrom.platform())
     print(platfrom.python_version())
     ```
+
 ## Chrome
   - Download CRX extension
     - https://clients2.google.com/service/update2/crx?response=redirect&prodversion=[PRODVERSION]&x=id%3D[EXTENSIONID]%26uc
@@ -334,6 +334,7 @@
     apt list --installed
     dpkg --get-selections
     ```
+    
 ## Java
   - JVM status check
     ```
