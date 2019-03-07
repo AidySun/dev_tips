@@ -200,6 +200,17 @@
   - Cannot find dylib files when adding links in Xcode?
     - [Using Other Linker Flags instead of selecting](https://stackoverflow.com/questions/32576979/libiconv-dylib-not-found-in-xcode-7-gm), e.g. `-liconv` instead of `libiconv.dylib`
     - As well as system frameworks (e.g. `-framework IOKit`)
+  - hostname
+    ```shell
+    scutil --get LocalHostName
+    sudo scutil --set HostName new.host.name
+    hostname
+    ```
+    
+  - enable built-in VNC control of macOS Mojave (10.14) when remoting desktop using VNC client
+    1. Open `System Preferences -> Security & Privacy -> Privacy -> Accessibility`
+    1. In `Finder`, navigate to `/System/Library/CoreServices/RemoteManagement/AppleVNCServer.bundle/Contents/MacOS/AppleVNCServer`
+    1. Add `AppleVNCServer` to granted list.
 
 ## Markdown
 - adding TOC in markdown
@@ -210,7 +221,7 @@
   <a name="link_name">content to show</a>
   ...
   [reference](#link_name)
-  ```
+  ``` 
 - [Paste to Markdown](http://euangoddard.github.io/clipboard2markdown/)
 
 
