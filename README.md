@@ -122,6 +122,10 @@
     # current branch master
     git checkout another_branch ./file1 ./file2
     ```
+  - merge a specific commit
+    ```shell
+    git cherry-pick <commit_no>
+    ```
     
   - [show branch name in bash command prompt](#show_branch_name_in_bash_command_prompt)
   - update [submodules](https://git-scm.com/book/en/v2/Git-Tools-Submodules) to latest 
