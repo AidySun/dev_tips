@@ -37,10 +37,7 @@
     ```
   - edit committed message which is NOT pushed yet
     ```shell
-    git rebase --interactive HEAD~1    # last one
-    # change pick to be 'edit'
-    git rebase --amend
-    git rebase --continue
+    git commit --amend
     ```
   - checkout one remote branch to local 
     ```git checkout -b localBranch origin/remoteBranch```
