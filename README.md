@@ -168,6 +168,10 @@
     ```bat
     keytool -list | find /c /v ""
     ```
+  - run cmd from a specific folder in a new window
+    ```bat
+    start /D C:\Users cmd /k echo "Hello world."
+    ```
 
 ## macOS
   - lockscreen using command
