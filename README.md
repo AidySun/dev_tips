@@ -217,6 +217,11 @@
     1. In `Finder`, navigate to `/System/Library/CoreServices/RemoteManagement/AppleVNCServer.bundle/Contents/MacOS/AppleVNCServer`
     1. Add `AppleVNCServer` to granted list.
 
+  - change default location to store screenshots
+    ```shell
+    defaults write com.apple.screencapture location ~/Pictures/screenshots/
+    ```
+
 ## Markdown
 - adding TOC in markdown
   [](https://github.com/naokazuterada/MarkdownTOC)
