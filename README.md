@@ -223,8 +223,7 @@
     ```
 
 ## Markdown
-- adding TOC in markdown
-  [](https://github.com/naokazuterada/MarkdownTOC)
+- Adding TOC with [MarkdownTOC](https://github.com/naokazuterada/MarkdownTOC)
 
 - bookmark
   ```
