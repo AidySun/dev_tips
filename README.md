@@ -94,6 +94,13 @@
     ```
     git log --stat --oneline
     git diff --name-only
+
+    git log -- file.ext     # by file
+    git log -p              # pring patch 
+    git show <commit_no>    # show specific comment
+    git log --grep="smth"   # filter by message
+    git shortlog            # group my author
+
     ```
     
   - un-stage a file, won't delete from local workspace
