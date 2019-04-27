@@ -228,6 +228,18 @@
     ```shell
     defaults write com.apple.screencapture location ~/Pictures/screenshots/
     ```
+  - mount NTFS hard disk
+    ```shell
+    # 1. connect hard disk to mac
+    # 2. find mount point 
+    mount | grep ntfs 
+    # 3. unmount first
+    sudo umount /dev/disk2s1
+    # 4. create a folder
+    mkdir ~/Desktop/hdisk
+    $ 5. mount it
+    sudo mount_ntfs -o rw,nobrowse /dev/disk2s1 ~/Desktop/hdisk
+    ```
 
 ## Markdown
 - Adding TOC with [MarkdownTOC](https://github.com/naokazuterada/MarkdownTOC)
