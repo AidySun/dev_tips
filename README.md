@@ -228,7 +228,7 @@
     ```shell
     defaults write com.apple.screencapture location ~/Pictures/screenshots/
     ```
-  - mount NTFS hard disk
+  - mount writable NTFS hard disk
     ```shell
     # 1. connect hard disk to mac
     # 2. find mount point 
@@ -237,7 +237,7 @@
     sudo umount /dev/disk2s1
     # 4. create a folder
     mkdir ~/Desktop/hdisk
-    $ 5. mount it
+    # 5. mount it
     sudo mount_ntfs -o rw,nobrowse /dev/disk2s1 ~/Desktop/hdisk
     ```
 
