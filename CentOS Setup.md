@@ -74,3 +74,22 @@ startx
 
 ```
 
+## Pinyin Input
+
+```shell
+yum install ibus
+yum install im-chooser
+imsettings-switch ibus
+```
+After adding Chinese input source in Settings application, the Chinese input only works when search applications, 
+but not in other applications (Firefox, Sublime Text, Termina, Text Editor etc.)
+
+Click Win/Mac key, type "input" to select `Input Method Selector`, and select `Use IBus` and log out.
+
+```shell
+# ~/.bash_profile
+#export GTK_IM_MODULE=ibus
+#export XMODIFILERS=@im=ibus
+#export QT_IM_MODULE=ibus
+```
+
