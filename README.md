@@ -35,9 +35,11 @@
     git rebace --interactive HEAD~n
     # then should pick ealy commit and squash later commit
     ```
-  - edit committed message which is NOT pushed yet
+
+  - edit last committed message 
     ```shell
     git commit --amend
+    git push --force    # if pushed already
     ```
   - checkout one remote branch to local 
     ```git checkout -b localBranch origin/remoteBranch```
