@@ -181,7 +181,8 @@
     ```bat
     start /D C:\Users cmd /k echo "Hello world."
     ```
-
+  - [Add "Open with Sublime Text 3" to Windows Explorer Context Menu](https://gist.github.com/AidySun/7e387fc6a8f5d70d34c258c3a0595bc9)
+  
 ## macOS
   - lockscreen using command
     ```shell
