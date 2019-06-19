@@ -257,6 +257,21 @@
 
 
 ## Shell
+  - why prefer `$()` to `` ` ` ``
+    * because `$()` can be nested
+    * it doesn't need to escape
+  - prefer `[[]]` to `[]`
+    ```
+    [ "${name}" \> "a" -o "${age}" \< "20"]   # using []
+    [[ "${name}" > "a" && "${age}" < "20"]]   # using [[]]
+    ```
+  - bash options
+    ```
+    #!/bin/bash
+    set -o nounset
+    set -o errexit
+    ...
+    ```
   - capture command output to file while alos viewing it live [more](https://askubuntu.com/a/731237)
     ```shell
     command |& tee file.txt
