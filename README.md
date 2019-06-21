@@ -149,6 +149,11 @@
 
 
 ## Windows
+  - task management in cmd
+    ```
+    tasklist | more
+    taskkill /IM "xxx.exe" /F
+    ```
   - Disable Hibernate to free up disk space
     - `powercfg -h off`
   - check user info and group info
