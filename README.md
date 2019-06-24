@@ -262,6 +262,15 @@
 
 
 ## Shell
+  - screen - multiple session in one terminal, especially useful for linux terminal
+    ```
+    screen -S sessionName
+    screen -ls
+    C-a w     # list all
+    C-a n     # next
+    C-a C-a
+    C-a 0..9
+    ```
   - why prefer `$()` to `` ` ` ``
     * because `$()` can be nested
     * it doesn't need to escape
