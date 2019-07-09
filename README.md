@@ -425,4 +425,30 @@
       ```tex
        -Djava.net.preferIPv4Stack=true 
       ```
+  - Chrome Selenium WebDriver cannot perform another action before previous action finishes
+    - tried `executeAsyncScript`, `sendKeys`, `click()` and Selenium IDE recording, no one worked
+    - final solution was to use `onclick` function of web element
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
