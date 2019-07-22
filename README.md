@@ -35,9 +35,11 @@
     git rebace --interactive HEAD~n
     # then should pick ealy commit and squash later commit
     ```
-  - edit committed message which is NOT pushed yet
+
+  - edit last committed message 
     ```shell
     git commit --amend
+    git push --force    # if pushed already
     ```
   - checkout one remote branch to local 
     ```git checkout -b localBranch origin/remoteBranch```
@@ -94,6 +96,13 @@
     ```
     git log --stat --oneline
     git diff --name-only
+
+    git log -- file.ext     # by file
+    git log -p              # pring patch 
+    git show <commit_no>    # show specific comment
+    git log --grep="smth"   # filter by message
+    git shortlog            # group my author
+
     ```
     
   - un-stage a file, won't delete from local workspace
@@ -140,6 +149,11 @@
 
 
 ## Windows
+  - task management in cmd
+    ```
+    tasklist | more
+    taskkill /IM "xxx.exe" /F
+    ```
   - Disable Hibernate to free up disk space
     - `powercfg -h off`
   - check user info and group info
@@ -168,7 +182,12 @@
     ```bat
     keytool -list | find /c /v ""
     ```
-
+  - run cmd from a specific folder in a new window
+    ```bat
+    start /D C:\Users cmd /k echo "Hello world."
+    ```
+  - [Add "Open with Sublime Text 3" to Windows Explorer Context Menu](https://gist.github.com/AidySun/7e387fc6a8f5d70d34c258c3a0595bc9)
+  
 ## macOS
   - lockscreen using command
     ```shell
@@ -213,9 +232,25 @@
     1. In `Finder`, navigate to `/System/Library/CoreServices/RemoteManagement/AppleVNCServer.bundle/Contents/MacOS/AppleVNCServer`
     1. Add `AppleVNCServer` to granted list.
 
+  - change default location to store screenshots
+    ```shell
+    defaults write com.apple.screencapture location ~/Pictures/screenshots/
+    ```
+  - mount writable NTFS hard disk
+    ```shell
+    # 1. connect hard disk to mac
+    # 2. find mount point 
+    mount | grep ntfs 
+    # 3. unmount first
+    sudo umount /dev/disk2s1
+    # 4. create a folder
+    mkdir ~/Desktop/hdisk
+    # 5. mount it
+    sudo mount_ntfs -o rw,nobrowse /dev/disk2s1 ~/Desktop/hdisk
+    ```
+
 ## Markdown
-- adding TOC in markdown
-  [](https://github.com/naokazuterada/MarkdownTOC)
+- Adding TOC with [MarkdownTOC](https://github.com/naokazuterada/MarkdownTOC)
 
 - bookmark
   ```
@@ -227,6 +262,30 @@
 
 
 ## Shell
+  - screen - multiple session in one terminal, especially useful for linux terminal
+    ```
+    screen -S sessionName
+    screen -ls
+    C-a w     # list all
+    C-a n     # next
+    C-a C-a
+    C-a 0..9
+    ```
+  - why prefer `$()` to `` ` ` ``
+    * because `$()` can be nested
+    * it doesn't need to escape
+  - prefer `[[]]` to `[]`
+    ```
+    [ "${name}" \> "a" -o "${age}" \< "20"]   # using []
+    [[ "${name}" > "a" && "${age}" < "20"]]   # using [[]]
+    ```
+  - bash options
+    ```
+    #!/bin/bash
+    set -o nounset
+    set -o errexit
+    ...
+    ```
   - capture command output to file while alos viewing it live [more](https://askubuntu.com/a/731237)
     ```shell
     command |& tee file.txt
@@ -280,6 +339,12 @@
 
 
 ## Vim
+  - vim color scheme
+    ```
+    # color themes locate in /usr/shared/vim/vim80/colors/
+    # in ~/.vimrc
+    colorscheme industry
+    ```
   - Key mappings
     ```
     // imap: insert mode, <c-d>:ctr+d, <esc>ddi: key in order 
@@ -360,4 +425,30 @@
       ```tex
        -Djava.net.preferIPv4Stack=true 
       ```
+  - Chrome Selenium WebDriver cannot perform another action before previous action finishes
+    - tried `executeAsyncScript`, `sendKeys`, `click()` and Selenium IDE recording, no one worked
+    - final solution was to use `onclick` function of web element
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
