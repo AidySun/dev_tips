@@ -18,6 +18,12 @@
 ------
 
 ## Git
+  - show all branches
+    ```
+    git branch -a  # -r
+    git remote show origin
+    git ls-remote --heads origin
+    ```
   - `bisect` - Use binary search to find the commit that introduced a bug 
     * [Get good with git: `bisect`](https://www.orangejellyfish.com/blog/get-good-with-git-bisect)
   - force overwrite local untracked files
