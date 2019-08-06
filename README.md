@@ -178,6 +178,11 @@
     REM run in Visual Studio Command Prompt
     dumpbin /HEADERS <your.dll> | more
     ```
+  - determine .lib is static or dynamic
+    ```bat
+    REM run in Visual Studio Command Prompt
+    lib /list xxx.lib     # xxx.dll - dynamic,   xxx.obj - static
+    ```
   - Windows equivalent of `wc -l` in Batch, `find /c /v ""`
     ```bat
     keytool -list | find /c /v ""
@@ -187,6 +192,9 @@
     start /D C:\Users cmd /k echo "Hello world."
     ```
   - [Add "Open with Sublime Text 3" to Windows Explorer Context Menu](https://gist.github.com/AidySun/7e387fc6a8f5d70d34c258c3a0595bc9)
+  - Visual Studio cleans wrong output directory when clean/rebuild?
+    - Intermediate Directory - if two platforms share the same intermediate dir, this issue will happen ever they have diff output dir.
+
   
 ## macOS
   - lockscreen using command
