@@ -155,6 +155,10 @@
 
 
 ## Windows
+  - copy multiple files between folders
+    ```
+    robocopy \src\dir  \dest\dir  file1.txt file2.pdf
+    ```
   - task management in cmd
     ```
     tasklist | more
