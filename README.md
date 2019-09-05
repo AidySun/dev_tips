@@ -155,6 +155,10 @@
 
 
 ## Windows
+  - Path of root of WSL Ubuntu from Store
+    ```
+    C:\Users\<username>\AppData\Local\Packages\CanonicalGroupLimited.UbuntuonWindows_79rhkp1fndgsc\LocalState
+    ```
   - copy multiple files between folders
     ```
     robocopy \src\dir  \dest\dir  file1.txt file2.pdf
