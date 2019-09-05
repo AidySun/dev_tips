@@ -437,6 +437,7 @@
     apt list --installed
     dpkg --get-selections
     ```
+  - show hidden folders `Ctrl+H` - tried on CentOS
     
 ## Java
   - JVM status check
