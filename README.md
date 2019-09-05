@@ -48,7 +48,11 @@
     git push --force    # if pushed already
     ```
   - checkout one remote branch to local 
-    ```git checkout -b localBranch origin/remoteBranch```
+    ```
+    git checkout -b localBranch origin/remoteBranch
+    # after fetch, switch to another remote branch with tracking
+    git checkout --track origin/2ndbranch
+    ```
 
   - delete remote branch 
     ```git push origin --delete branch_name```
