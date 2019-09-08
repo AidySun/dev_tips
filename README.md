@@ -438,7 +438,13 @@
     dpkg --get-selections
     ```
   - show hidden folders `Ctrl+H` - tried on CentOS
-    
+
+## CentOS    
+  - how to change `libc.so.6` link? **Do not try to rm it and recreate the link**
+    ```
+    ldconfig -l -v /lib64/libc-2.30.so
+    ```
+
 ## Java
   - JVM status check
     ```
