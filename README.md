@@ -31,6 +31,10 @@
     git fetch --all
     git reset --hard origin/master
     ```
+  - change message of last commit
+    ```
+    git commit --amend
+    ```
   - merge multiple commits into one
     ```shell
     # approach 1
