@@ -11,6 +11,7 @@
 1. [Python](#python)
 1. [Chrome](#chrome)
 1. [Ubuntu](#ubuntu)
+1. [CentOS](#centos)
 1. [Java](#java)
 
 <!-- /MarkdownTOC -->
@@ -216,7 +217,13 @@
   - [Add "Open with Sublime Text 3" to Windows Explorer Context Menu](https://gist.github.com/AidySun/7e387fc6a8f5d70d34c258c3a0595bc9)
   - Visual Studio cleans wrong output directory when clean/rebuild?
     - Intermediate Directory - if two platforms share the same intermediate dir, this issue will happen ever they have diff output dir.
-
+  - Unallocated space in USB flash drive, run `diskpart`
+    ```
+    disk list
+    select disk 1
+    clean
+    clean partition primary
+    ```
   
 ## macOS
   - lockscreen using command
