@@ -372,8 +372,14 @@
     expect eof
     DONE
     ```
-
-
+  - `xargs` - each line as a parameter to a cmd
+    ```
+    cat file.txt | xargs -L1 <cmd>
+    ```
+  - [replacing all line breaks](https://stackoverflow.com/questions/1251999/how-can-i-replace-a-newline-n-using-sed)
+    ```
+    sed ":a;N;$!ba;s/\n/,/g' file
+    ```
 
 ## Vim
   - vim color scheme
