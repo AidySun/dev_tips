@@ -43,8 +43,17 @@
     git commit --amend
 
     # approach 2
+
     git rebace --interactive HEAD~n
+    # or
+    git rebace -i <commit#>
+
     # then should pick ealy commit and squash later commit
+
+    git rebase --continue
+
+    # puth to remote repository forcely
+    git push origin <branch> --force
     ```
 
   - edit last committed message 
