@@ -13,6 +13,7 @@
 1. [Ubuntu](#ubuntu)
 1. [CentOS](#centos)
 1. [Java](#java)
+1. [CPP](#cpp)
 
 <!-- /MarkdownTOC -->
 
@@ -488,6 +489,12 @@
     - tried `executeAsyncScript`, `sendKeys`, `click()` and Selenium IDE recording, no one worked
     - final solution was to use `onclick` function of web element
 
+## CPP
+
+  - Since C++11, `unique_ptr` supports dynamic array, but not `shared_ptr`
+    ```
+    std::unique_ptr<int[]> p(new int[nsize]); // type is int[]
+    ```
 
 
 
