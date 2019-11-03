@@ -159,10 +159,7 @@
     ```
     
   - [show branch name in bash command prompt](#show_branch_name_in_bash_command_prompt)
-  - update [submodules](https://git-scm.com/book/en/v2/Git-Tools-Submodules) to latest 
-    ```shell
-    git submodule update --init --recursive --remote
-    ```
+
   - [Splitting a subfolder out into a new repository](https://help.github.com/articles/splitting-a-subfolder-out-into-a-new-repository/)    
 
   - "refusing to merge unrelated histories”
@@ -170,6 +167,38 @@
   - rename file sensitively on Windows
     ```shell
     git mv -f Myfile myfile
+    ```
+
+### git submodule
+  - add - **NOTE:** `.gitmodules` should be committed for tracking
+  ```
+  git submodule add http....
+  ```
+  - clone / update submodules
+    - when clone
+    ```
+    git clone --recurse-submodules https://main-repo
+    ```
+    - after clone (if `--recurse-submodules` was forgotten)
+    ```
+    git submodule update --init    # which is a combination of following two steps
+    git submodule init
+    git submodule update
+    ```
+  - show submodules status
+    ```
+    git config status.submodulesummary 1
+    ```
+  - update [submodules](https://git-scm.com/book/en/v2/Git-Tools-Submodules) to latest 
+    ```shell
+    git submodule update --init --recursive --remote [subModuleName]
+    ```
+  - [how to remove a submodule](https://stackoverflow.com/questions/1260748/how-do-i-remove-a-submodule)
+    ```
+    0. mv a/submodule a/submodule_tmp
+    1. git submodule deinit -f -- a/submodule    
+    2. rm -rf .git/modules/a/submodule
+    3. git rm -f a/submodule
     ```
 
 
