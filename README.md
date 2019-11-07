@@ -45,9 +45,9 @@
 
     # approach 2
 
-    git rebace --interactive HEAD~n
+    git rebase --interactive HEAD~n
     # or
-    git rebace -i <commit#>
+    git rebase -i <commit#>
 
     # then should pick ealy commit and squash later commit
 
@@ -338,6 +338,13 @@
 
 
 ## Shell
+
+  - rename files/folders with regex replacement
+    ```shell
+    # rename files contain "2017" to be "2018" 
+    for f in *; do echo  mv "$f" "${f/2017/2018}"; done
+    ```
+
   - screen - multiple session in one terminal, especially useful for linux terminal
     ```
     screen -S sessionName
@@ -383,12 +390,6 @@
   - copy files to local system via SSH
     ```scp -r username@10.1.1.1:~/Downloads/folder ~/Downloads```
 
-  - rename files/folders with regex replacement
-    ```shell
-    # rename files contain "2017" to be "2018" 
-    for f in *; do echo  mv "$f" "${f/2017/2018}"; done
-    # remove echo to do the real renaming
-    ```
   - default parameter value
     ```shell
     set var1 = ${1:-default} # set var1 to be 'default' if $1 is not set
