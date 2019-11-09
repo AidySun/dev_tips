@@ -496,6 +496,21 @@
     ```
   - show hidden folders `Ctrl+H` - tried on CentOS
 
+  - what if python was removed from system
+    - `Ctrl+Alt+F4` to enter terminal
+    - `sudo apt-get install ubuntu-minimal ubuntu-standard ubuntu-desktop`
+    - `sudo reboot`
+    - `startx`
+
+  - `pip` does not work [after upgrade](https://stackoverflow.com/questions/49836676/error-after-upgrading-pip-cannot-import-name-main), it says `ImportError: cannot import name 'main'`
+    ```
+    sudo python[3] -m pip uninstall pip && sudo apt install python3-pip --reinstall
+    pip3 # or
+    python3 -m pip
+    ```
+
+
+
 ## CentOS    
   - how to change `libc.so.6` link? **Do not try to rm it and recreate the link**
     ```
