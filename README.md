@@ -56,7 +56,14 @@
     # puth to remote repository forcely
     git push origin <branch> --force
     ```
-
+  - [edit a pushed commit message](https://stackoverflow.com/questions/1186535/how-to-modify-a-specified-commit)
+    ```
+    git rebase -i '<commitno>^'
+    # change pick to be edit, save
+    git commit --amend
+    git rebase --continue
+    git push --force
+    ```
   - edit last committed message 
     ```shell
     git commit --amend
