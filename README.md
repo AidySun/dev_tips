@@ -331,6 +331,8 @@
     # 5. mount it
     sudo mount_ntfs -o rw,nobrowse /dev/disk2s1 ~/Desktop/hdisk
     ```
+  - [Accessing Grayed-out Preference Panes](http://walkingtowel.org/2010/02/25/accessing-mac-os-x-leopard-greyed-out-preference-panes/)
+    - Duplicate `System Preferences.app`, and delete `NSPrefPaneGroups.xml`.
 
 ## Markdown
 - Adding TOC with [MarkdownTOC](https://github.com/naokazuterada/MarkdownTOC)
