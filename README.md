@@ -14,8 +14,7 @@
 1. [CentOS](#centos)
 1. [Java](#java)
 1. [CPP](#cpp)
-
-<!-- /MarkdownTOC -->
+1. [ImageMagick Usages](./ImageMagick.md)
 
 ------
 
