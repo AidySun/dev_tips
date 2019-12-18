@@ -19,6 +19,13 @@
 ------
 
 ## Git
+  - force pull a repo to overwrite local changes
+    ```
+    git fetch --all
+    git reset --hard origin/master
+
+    git pull --force # not work if repo has forced push
+    ```
   - show all branches
     ```
     git branch -a  # -r
