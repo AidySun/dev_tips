@@ -1,20 +1,25 @@
 # TOC
 
-<!-- MarkdownTOC levels="2" autolink="true" style="ordered" -->
+<!-- MarkdownTOC levels="2, 3, 4" autolink="true" style="unordered" -->
 
-1. [Git](#git)
-1. [Windows](#windows)
-1. [macOS](#macos)
-1. [Markdown](#markdown)
-1. [Shell](#shell)
-1. [Vim](#vim)
-1. [Python](#python)
-1. [Chrome](#chrome)
-1. [Ubuntu](#ubuntu)
-1. [CentOS](#centos)
-1. [Java](#java)
-1. [CPP](#cpp)
-1. [ImageMagick Usages](./ImageMagick.md)
+- [Git](#git)
+  - [branch](#branch)
+  - [submodule](#submodule)
+- [Windows](#windows)
+- [macOS](#macos)
+- [Markdown](#markdown)
+- [Shell](#shell)
+- [Vim](#vim)
+- [Python](#python)
+- [Chrome](#chrome)
+- [Ubuntu](#ubuntu)
+- [CentOS](#centos)
+- [Java](#java)
+- [CPP](#cpp)
+
+<!-- /MarkdownTOC -->
+- Others
+  - [ImageMagick Usages](./ImageMagick.md)
 
 ------
 
@@ -26,14 +31,9 @@
 
     git pull --force # not work if repo has forced push
     ```
-  - show all branches
-    ```
-    git branch -a  # -r
-    git remote show origin
-    git ls-remote --heads origin
-    ```
   - `bisect` - Use binary search to find the commit that introduced a bug 
     * [Get good with git: `bisect`](https://www.orangejellyfish.com/blog/get-good-with-git-bisect)
+
   - force overwrite local untracked files
     ```shell
     git fetch --all
@@ -59,7 +59,7 @@
 
     git rebase --continue
 
-    # puth to remote repository forcely
+    # push to remote repository forcely
     git push origin <branch> --force
     ```
   - [edit a pushed commit message](https://stackoverflow.com/questions/1186535/how-to-modify-a-specified-commit)
@@ -75,15 +75,6 @@
     git commit --amend
     git push --force    # if pushed already
     ```
-  - checkout one remote branch to local 
-    ```
-    git checkout -b localBranch origin/remoteBranch
-    # after fetch, switch to another remote branch with tracking
-    git checkout --track origin/2ndbranch
-    ```
-
-  - delete remote branch 
-    ```git push origin --delete branch_name```
 
   - stop tracking a file/directory
     ```shell
@@ -161,17 +152,10 @@
     # other to get the new tags
     git pull --purne --tags
     ```
-  - merge/checkout files from another branch
-    ```shell
-    # current branch master
-    git checkout another_branch ./file1 ./file2
-    ```
   - merge a specific commit
     ```shell
     git cherry-pick <commit_no>
     ```
-    
-  - [show branch name in bash command prompt](#show_branch_name_in_bash_command_prompt)
 
   - [Splitting a subfolder out into a new repository](https://help.github.com/articles/splitting-a-subfolder-out-into-a-new-repository/)    
 
@@ -182,7 +166,38 @@
     git mv -f Myfile myfile
     ```
 
-### git submodule
+### branch
+
+  - show all branches
+    ```
+    git branch -a  # -r
+    git remote show origin
+    git ls-remote --heads origin
+    ```
+  - merge/checkout files from another branch
+    ```shell
+    # current branch master
+    git checkout another_branch ./file1 ./file2
+    ``` 
+  - [show branch name in bash command prompt](#show_branch_name_in_bash_command_prompt)
+
+  - checkout one remote branch to local 
+    ```
+    git checkout -b localBranch origin/remoteBranch
+    # after fetch, switch to another remote branch with tracking
+    git checkout --track origin/2ndbranch
+    ```
+
+  - delete remote branch 
+    ```git push origin --delete branch_name```
+
+  - force push to remote repository
+    ```
+    git push origin <branch> --force
+    ```
+
+### submodule
+
   - add - **NOTE:** `.gitmodules` should be committed for tracking
   ```
   git submodule add http....
@@ -401,7 +416,6 @@
 
     export PS1="\n\[\e[1;33m\]\t \[\e[1;32m\]\w\[\e[0;33m\] $(git_branch) \n\[\e[1m\]\[\e[0;32m\]>>> \$ \[\e[0m\]"
     ```
-
   - copy files to local system via SSH
     ```scp -r username@10.1.1.1:~/Downloads/folder ~/Downloads```
 
