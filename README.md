@@ -293,6 +293,10 @@
     ```
   
 ## macOS
+  - add user to group
+    ```shell
+    sudo dseditgroup -o edit -a aidy -t user wheelGroup
+    ```
   - lockscreen using command
     ```shell
     /System/Library/CoreServices//Menu\ Extras/User.menu/Contents/Resources/CGSession -suspend
