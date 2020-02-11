@@ -558,6 +558,10 @@
     jmap -heap <jvmid>
     jmap -histo:live <jvmid> | more
     ```
+  - Get JNI method signature from java class
+    ```
+    javap -s a.class
+    ```
   - Eclipse cannot connect to Marketplace (from China)
     * add following content to `eclipse.ini` (in Eclipse.app on macOS)
       ```tex
