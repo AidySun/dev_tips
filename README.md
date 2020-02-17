@@ -293,6 +293,11 @@
     ```
   
 ## macOS
+  - if usb of MBR cannot charing iPhone
+    ```
+    sudo killall -STOP -c usbd
+    sudo killall -CONT usbd
+    ```
   - add user to group
     ```shell
     sudo dseditgroup -o edit -a aidy -t user wheelGroup
