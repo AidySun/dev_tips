@@ -127,7 +127,7 @@
     git diff --name-only
 
     git log -- file.ext     # by file
-    git log -p              # pring patch 
+    git log -p              # print patch, source diff 
     git show <commit_no>    # show specific comment
     git log --grep="smth"   # filter by message
     git shortlog            # group my author
@@ -220,6 +220,7 @@
   - update [submodules](https://git-scm.com/book/en/v2/Git-Tools-Submodules) to latest 
     ```shell
     git submodule update --init --recursive --remote [subModuleName]
+    git submodule update --remote     # would update existing submodule to latest
     ```
   - [how to remove a submodule](https://stackoverflow.com/questions/1260748/how-do-i-remove-a-submodule)
     ```
