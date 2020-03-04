@@ -199,9 +199,9 @@
 ### submodule
 
   - add - **NOTE:** `.gitmodules` should be committed for tracking
-  ```
-  git submodule add http....
-  ```
+    ```
+    git submodule add http....
+    ```
   - clone / update submodules
     - when clone
     ```
