@@ -171,6 +171,7 @@
   - show all branches
     ```
     git branch -a  # -r
+    git branch -vv
     git remote show origin
     git ls-remote --heads origin
     ```
@@ -183,9 +184,8 @@
 
   - checkout one remote branch to local 
     ```
-    git checkout -b localBranch origin/remoteBranch
-    # after fetch, switch to another remote branch with tracking
-    git checkout --track origin/2ndbranch
+    git checkout --track origin/branch
+    # --track is shorthand for -b [local_branch] [remote]/[branch]
     ```
 
   - delete remote branch 
@@ -229,7 +229,6 @@
     2. rm -rf .git/modules/a/submodule
     3. git rm -f a/submodule
     ```
-
 
 ## Windows
   - Path of root of WSL Ubuntu from Store
