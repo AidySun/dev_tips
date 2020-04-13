@@ -165,6 +165,7 @@
     ```shell
     git mv -f Myfile myfile
     ```
+  - Commit statistics : `git shortlog -sn`
 
 ### branch
 
