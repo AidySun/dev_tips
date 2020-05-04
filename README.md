@@ -24,6 +24,14 @@
 ------
 
 ## Git
+  - Fatal: Refusing to merge unrelated histories
+    New repo was created via UI with init commit. 
+    At the same time, git add at local and with another init commit. 
+    When git pull at local, git treats those two as diff trees since they don't have same origin.
+
+    Solution 1: using `git clone` to clone repo to local
+    Solution 2: `git pull origin [repo] --allow-unrelated-histories`
+
   - force pull a repo to overwrite local changes
     ```
     git fetch --all
