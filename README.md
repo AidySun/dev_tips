@@ -387,6 +387,10 @@
 
 ## Shell
 
+  - compare folders
+    ```
+    diff -rq folder1 folder2
+    ```
   - rename files/folders with regex replacement
     ```shell
     # rename files contain "2017" to be "2018" 
