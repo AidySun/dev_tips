@@ -302,6 +302,10 @@
     ```
   
 ## macOS
+  - *"Your password does not meet the requirements"*, reset the password policy database:
+    ```
+    sudo pwpolicy -clearaccountpolicies
+    ```
   - if usb of MBR cannot charing iPhone
     ```
     sudo killall -STOP -c usbd
