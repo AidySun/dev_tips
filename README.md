@@ -16,6 +16,7 @@
 - [CentOS](#centos)
 - [Java](#java)
 - [CPP](#cpp)
+- [XPath](#xpath)
 
 <!-- /MarkdownTOC -->
 - Others
@@ -603,6 +604,11 @@
     std::unique_ptr<int[]> p(new int[nsize]); // type is int[]
     ```
 
+## XPath
+
+  - Samples
+    - //table[class='table-class']//td[contains(text(),'row1']/following-sibling::td[text()='column 2']
+    - //div[@alt='This is a img' and @class='img-class']
 
 
 
