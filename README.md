@@ -250,7 +250,7 @@
     ```
   - task management in cmd
     ```
-    tasklist | more
+    tasklist /FI "IMAGENAME eq xxx.exe"
     taskkill /IM "xxx.exe" /F
     ```
   - Disable Hibernate to free up disk space
@@ -306,6 +306,9 @@
     ```
     sudo pwpolicy -clearaccountpolicies
     ```
+  - Storage management
+    - `~/Library/Caches`
+    
   - if usb of MBR cannot charing iPhone
     ```
     sudo killall -STOP -c usbd
