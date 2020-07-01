@@ -368,15 +368,12 @@
     ```
   - mount writable NTFS hard disk
     ```shell
-    # 1. connect hard disk to mac
-    # 2. find mount point 
-    mount | grep ntfs 
-    # 3. unmount first
-    sudo umount /dev/disk2s1
-    # 4. create a folder
-    mkdir ~/Desktop/hdisk
-    # 5. mount it
-    sudo mount_ntfs -o rw,nobrowse /dev/disk2s1 ~/Desktop/hdisk
+    0. plug NTFS usb
+    1. sudo nano /etc/fstab
+    2. LABEL=NAME none ntfs rw,auto,nobrowse
+    3. Ctrl+O
+    4. remove NTFS usb and reconnect it
+    5. ls /Volumes
     ```
   - [Accessing Grayed-out Preference Panes](http://walkingtowel.org/2010/02/25/accessing-mac-os-x-leopard-greyed-out-preference-panes/)
     - Duplicate `System Preferences.app`, and delete `NSPrefPaneGroups.xml`.
