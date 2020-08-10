@@ -303,6 +303,10 @@
     ```
   
 ## macOS
+  - Sort child folders by size
+    ```
+    du -hc -d 1 | grep -v "/$" | sort -rh
+    ```
   - *"Your password does not meet the requirements"*, reset the password policy database:
     ```
     sudo pwpolicy -clearaccountpolicies
