@@ -1,6 +1,6 @@
 # TOC
 
-<!-- MarkdownTOC levels="2, 3, 4" autolink="true" style="unordered" -->
+<!-- MarkdownTOC levels="1, 2, 3, 4" autolink="true" style="unordered" -->
 
 - [Git](#git)
   - [branch](#branch)
@@ -19,12 +19,14 @@
 - [XPath](#xpath)
 
 <!-- /MarkdownTOC -->
+
 - Others
   - [ImageMagick Usages](./ImageMagick.md)
 
 ------
 
 ## Git
+
   - Fatal: Refusing to merge unrelated histories
     New repo was created via UI with init commit. 
     At the same time, git add at local and with another init commit. 
@@ -189,18 +191,17 @@
     ```shell
     # current branch master
     git checkout another_branch ./file1 ./file2
-    ``` 
+    ```
   - [show branch name in bash command prompt](#show_branch_name_in_bash_command_prompt)
-
   - checkout one remote branch to local 
     ```
     git checkout --track origin/branch
     # --track is shorthand for -b [local_branch] [remote]/[branch]
     ```
-
   - delete remote branch 
-    ```git push origin --delete branch_name```
-
+    ```
+    git push origin --delete branch_name
+    ```
   - force push to remote repository
     ```
     git push origin <branch> --force
@@ -223,15 +224,18 @@
     git submodule init
     git submodule update
     ```
+
   - show submodules status
     ```
     git config status.submodulesummary 1
     ```
+
   - update [submodules](https://git-scm.com/book/en/v2/Git-Tools-Submodules) to latest 
     ```shell
     git submodule update --init --recursive --remote [subModuleName]
     git submodule update --remote     # would update existing submodule to latest
     ```
+
   - [how to remove a submodule](https://stackoverflow.com/questions/1260748/how-do-i-remove-a-submodule)
     ```
     0. mv a/submodule a/submodule_tmp
@@ -241,6 +245,7 @@
     ```
 
 ## Windows
+
   - Path of root of WSL Ubuntu from Store
     ```
     C:\Users\<username>\AppData\Local\Packages\CanonicalGroupLimited.UbuntuonWindows_79rhkp1fndgsc\LocalState
@@ -301,8 +306,16 @@
     clean
     clean partition primary
     ```
-  
+
 ## macOS
+
+  - Use old build system with Xcode 10 and later : `xcodebuild  -UseModernBuildSystem=NO -project xxx`
+
+  - Remove download from info:
+    ```
+    xattr -r -d com.apple.metadata:kMDItemWhereFroms xxx.zip
+    xattr -r -d com.apple.quarantine xxx.zip
+    ```
   - Sort child folders by size
     ```
     du -hc -d 1 | grep -v "/$" | sort -rh
@@ -383,6 +396,7 @@
     - Duplicate `System Preferences.app`, and delete `NSPrefPaneGroups.xml`.
 
 ## Markdown
+
 - Adding TOC with [MarkdownTOC](https://github.com/naokazuterada/MarkdownTOC)
 
 - bookmark
@@ -390,9 +404,8 @@
   <a name="link_name">content to show</a>
   ...
   [reference](#link_name)
-  ``` 
+  ```
 - [Paste to Markdown](http://euangoddard.github.io/clipboard2markdown/)
-
 
 ## Shell
 
@@ -448,20 +461,20 @@
     export PS1="\n\[\e[1;33m\]\t \[\e[1;32m\]\w\[\e[0;33m\] $(git_branch) \n\[\e[1m\]\[\e[0;32m\]>>> \$ \[\e[0m\]"
     ```
   - copy files to local system via SSH
-    ```scp -r username@10.1.1.1:~/Downloads/folder ~/Downloads```
+    ```
+    scp -r username@10.1.1.1:~/Downloads/folder ~/Downloads
+    ```
 
   - default parameter value
     ```shell
     set var1 = ${1:-default} # set var1 to be 'default' if $1 is not set
     set var2 = ${VARIABLE2:-empty} # set var2 to be 'empty' if $VARIABLE2 is not set
     ```
-
   - prompt for user input
     ```shell
     read -p "input a word: " inputtedVar
     echo $inputtedVar
     ```
-
   - auto input for prompt/password
     ```shell
     expect <<- DONE
@@ -482,6 +495,7 @@
     ```
 
 ## Vim
+
   - vim color scheme
     ```
     # color themes locate in /usr/shared/vim/vim80/colors/
@@ -507,7 +521,9 @@
     :ctr+w = " equal size
     ```
   - Open multiple files with split windows
-    ```$ vim -o[O] file1 file2 ...```
+    ```
+    $ vim -o[O] file1 file2 ...
+    ```
   - Scroll screen without changing cursor
     ```
     zz " move current line to middle of screen
@@ -524,6 +540,7 @@
     ```
 
 ## Python
+
   - Install packages in Jupyter Notebook
     ```
     import sys
@@ -543,12 +560,14 @@
     ```
 
 ## Chrome
+
   - Download CRX extension
     - https://clients2.google.com/service/update2/crx?response=redirect&prodversion=[PRODVERSION]&x=id%3D[EXTENSIONID]%26uc
       - [PRODVERSION] is the version of Chrome, which must be 31.0.1609.0 at the very least
       - [EXTENSIONID] is the ID of the extension
 
 ## Ubuntu
+
   - List installed packages
     ```
     apt list --installed
@@ -571,13 +590,15 @@
 
 
 
-## CentOS    
+## CentOS
+
   - how to change `libc.so.6` link? **Do not try to rm it and recreate the link**
     ```
     ldconfig -l -v /lib64/libc-2.30.so
     ```
 
 ## Java
+
   - JVM status check
     ```
     jps -v
