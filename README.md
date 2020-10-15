@@ -382,6 +382,9 @@
   - [Accessing Grayed-out Preference Panes](http://walkingtowel.org/2010/02/25/accessing-mac-os-x-leopard-greyed-out-preference-panes/)
     - Duplicate `System Preferences.app`, and delete `NSPrefPaneGroups.xml`.
 
+  - Useful commands from linux
+    - `ulimit -a, at, cron `
+
 ## Markdown
 - Adding TOC with [MarkdownTOC](https://github.com/naokazuterada/MarkdownTOC)
 
