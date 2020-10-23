@@ -246,6 +246,10 @@
 
 ## Windows
 
+  - Screenshot of current window
+     ```
+     Win + Alt + PrtSc
+     ```
   - Path of root of WSL Ubuntu from Store
     ```
     C:\Users\<username>\AppData\Local\Packages\CanonicalGroupLimited.UbuntuonWindows_79rhkp1fndgsc\LocalState
