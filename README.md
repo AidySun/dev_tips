@@ -435,6 +435,13 @@
     C-a C-a
     C-a 0..9
     ```
+    - `.screenrc`
+      ```
+      vbell on
+      vbell_msg ''   # turn off wuff----wuff----!
+      termcapinfo * vb=:   # set flash to a empty string
+      ```
+      - reload `screenrc` without restarting screen : `Ctrl+a : source /etc/screenrc`
   - why prefer `$()` to `` ` ` ``
     * because `$()` can be nested
     * it doesn't need to escape
