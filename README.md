@@ -246,6 +246,11 @@
 
 ## Windows
 
+  - turn off terminal bell in subsystem linux
+    ```
+    $ sudo vi /etc/inputrc
+    set bell-style none
+    ``` 
   - Screenshot of current window
      ```
      Win + Alt + PrtSc
