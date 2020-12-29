@@ -655,7 +655,11 @@
     - //table[class='table-class']//td[contains(text(),'row1']/following-sibling::td[text()='column 2']
     - //div[@alt='This is a img' and @class='img-class']
 
+## Sublime Text
 
+  - vertical selection with keybowrd
+    - Mac: Ctrl+Shift+Up/Down
+    - Win, Linux: Ctrl+Alt+Up/Down
 
 
 
