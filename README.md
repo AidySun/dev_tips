@@ -3,8 +3,8 @@
 <!-- MarkdownTOC levels="1, 2, 3, 4" autolink="true" style="unordered" -->
 
 - [Git](#git)
-  - [branch](#branch)
-  - [submodule](#submodule)
+	- [branch](#branch)
+	- [submodule](#submodule)
 - [Windows](#windows)
 - [macOS](#macos)
 - [Markdown](#markdown)
@@ -17,6 +17,7 @@
 - [Java](#java)
 - [CPP](#cpp)
 - [XPath](#xpath)
+- [Sublime Text](#sublime-text)
 
 <!-- /MarkdownTOC -->
 
@@ -251,10 +252,8 @@
     $ sudo vi /etc/inputrc
     set bell-style none
     ``` 
-  - Screenshot of current window
-     ```
-     Win + Alt + PrtSc
-     ```
+  - Auto save the screenshoot: `Win + PrtSc`
+  - Screenshot of current window: `Win + Alt + PrtSc`
   - Path of root of WSL Ubuntu from Store
     ```
     C:\Users\<username>\AppData\Local\Packages\CanonicalGroupLimited.UbuntuonWindows_79rhkp1fndgsc\LocalState
