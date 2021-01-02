@@ -421,6 +421,7 @@
 
 ## Shell
 
+  - margin setting for Ubuntu terminal : https://askubuntu.com/questions/115762/increase-padding-in-gnome-terminal
   - compare folders
     ```
     diff -rq folder1 folder2
