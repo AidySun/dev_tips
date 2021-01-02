@@ -3,8 +3,8 @@
 <!-- MarkdownTOC levels="1, 2, 3, 4" autolink="true" style="unordered" -->
 
 - [Git](#git)
-	- [branch](#branch)
-	- [submodule](#submodule)
+  - [branch](#branch)
+  - [submodule](#submodule)
 - [Windows](#windows)
 - [macOS](#macos)
 - [Markdown](#markdown)
@@ -17,7 +17,6 @@
 - [Java](#java)
 - [CPP](#cpp)
 - [XPath](#xpath)
-- [Sublime Text](#sublime-text)
 
 <!-- /MarkdownTOC -->
 
@@ -252,8 +251,10 @@
     $ sudo vi /etc/inputrc
     set bell-style none
     ``` 
-  - Auto save the screenshoot: `Win + PrtSc`
-  - Screenshot of current window: `Win + Alt + PrtSc`
+  - Screenshot of current window
+     ```
+     Win + Alt + PrtSc
+     ```
   - Path of root of WSL Ubuntu from Store
     ```
     C:\Users\<username>\AppData\Local\Packages\CanonicalGroupLimited.UbuntuonWindows_79rhkp1fndgsc\LocalState
@@ -654,11 +655,7 @@
     - //table[class='table-class']//td[contains(text(),'row1']/following-sibling::td[text()='column 2']
     - //div[@alt='This is a img' and @class='img-class']
 
-## Sublime Text
 
-  - vertical selection with keybowrd
-    - Mac: Ctrl+Shift+Up/Down
-    - Win, Linux: Ctrl+Alt+Up/Down
 
 
 
