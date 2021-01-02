@@ -558,6 +558,9 @@
     A        " insert at end of the line
     :n1,n2 w [filename]    " save lines n1~n2 as 
     ```
+  - Plugin
+    - https://github.com/junegunn/vim-plug/wiki/tutorial
+    - https://github.com/peterhoeg/vim-qml
 
 ## Python
 
