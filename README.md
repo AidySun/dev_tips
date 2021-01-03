@@ -659,6 +659,10 @@
     - //table[class='table-class']//td[contains(text(),'row1']/following-sibling::td[text()='column 2']
     - //div[@alt='This is a img' and @class='img-class']
 
+## VMWare
+
+- Shortcut to escape VM (on Windows): `Ctrl+Alt`
+  - Switch back to vmware with `Alt+Tab` then `Ctrl+g`
 
 
 
