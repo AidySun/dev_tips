@@ -433,12 +433,14 @@
 
   - screen - multiple session in one terminal, especially useful for linux terminal
     ```
-    screen -S sessionName
     screen -ls
-    C-a w     # list all
+    screen -r xx # restore/reattach
+    C-a w   / C-a "  # list all
     C-a n     # next
     C-a C-a
     C-a 0..9
+    C-a '
+    C-a k    # close current window in screen
     ```
     - `.screenrc`
       ```
