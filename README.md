@@ -516,6 +516,13 @@
 
 ## Vim
 
+  - Hide vim to background
+    ```
+    # in vim
+    Ctrl+z
+    # then, return to vim
+    fg
+    ```
   - vim color scheme
     ```
     # color themes locate in /usr/shared/vim/vim80/colors/
