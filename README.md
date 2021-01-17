@@ -421,6 +421,7 @@
 
 ## Shell
 
+  - margin setting for Ubuntu terminal : https://askubuntu.com/questions/115762/increase-padding-in-gnome-terminal
   - compare folders
     ```
     diff -rq folder1 folder2
@@ -517,6 +518,13 @@
 
 ## Vim
 
+  - Hide vim to background
+    ```
+    # in vim
+    Ctrl+z
+    # then, return to vim
+    fg
+    ```
   - vim color scheme
     ```
     # color themes locate in /usr/shared/vim/vim80/colors/
@@ -559,6 +567,9 @@
     A        " insert at end of the line
     :n1,n2 w [filename]    " save lines n1~n2 as 
     ```
+  - Plugin
+    - https://github.com/junegunn/vim-plug/wiki/tutorial
+    - https://github.com/peterhoeg/vim-qml
 
 ## Python
 
@@ -657,6 +668,10 @@
     - //table[class='table-class']//td[contains(text(),'row1']/following-sibling::td[text()='column 2']
     - //div[@alt='This is a img' and @class='img-class']
 
+## VMWare
+
+- Shortcut to escape VM (on Windows): `Ctrl+Alt`
+  - Switch back to vmware with `Alt+Tab` then `Ctrl+g`
 
 
 
