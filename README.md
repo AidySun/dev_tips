@@ -17,6 +17,7 @@
 - [Java](#java)
 - [CPP](#cpp)
 - [XPath](#xpath)
+- [VMWare](#vmware)
 
 <!-- /MarkdownTOC -->
 
@@ -465,10 +466,17 @@
     set -o errexit
     ...
     ```
-  - capture command output to file while alos viewing it live [more](https://askubuntu.com/a/731237)
-    ```shell
-    command |& tee file.txt
-    ```
+  - redirection in shell
+    - 0: stdin, 1: stdout, 2: stderr
+      ```
+      ls a.txt b.txt > output.txt 2> error_output.txt
+      ls a b c > all_output.txt 2>&1
+      ```
+      - `>&` redirects one out data stream to another
+    - capture command output to file while alos viewing it live [more](https://askubuntu.com/a/731237)
+      ```shell
+      command |& tee file.txt
+      ```
   - Turn on ANSI color in Terminal, add following lines in *~/.profile*
     ```shell
     export CLICOLOR=1
