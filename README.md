@@ -422,6 +422,12 @@
 
 ## Shell
 
+  - diff
+    - diff a.txt b.txt    # normal diff
+      - `3c3`: 3-line num, c-change (d-delete, a-addition), 3-line number
+      - `<`: delete, `>`: add
+    - diff -c a.txt b.txt # context diff
+    - diff -u a.txt b.txt # unified diff
   - margin setting for Ubuntu terminal : https://askubuntu.com/questions/115762/increase-padding-in-gnome-terminal
   - compare folders
     ```
