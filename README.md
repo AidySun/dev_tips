@@ -256,6 +256,10 @@
      ```
      Win + Alt + PrtSc
      ```
+  - Path of saved screenshot token with "Win+Shift+S"
+    ```
+    C:\Users\<username>\AppData\Local\Packages\Microsoft.Windows.ShellExperienceHost_cw5n1h2txyewy\TempState\ScreenClip
+    ```
   - Path of root of WSL Ubuntu from Store
     ```
     C:\Users\<username>\AppData\Local\Packages\CanonicalGroupLimited.UbuntuonWindows_79rhkp1fndgsc\LocalState
