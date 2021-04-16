@@ -248,6 +248,9 @@
 
 ## Windows
 
+  - Manage stored certificates 
+    - Win+R `control keymgr.dll`
+    - Control Panel\All Control Panel Items\Credential Manager
   - turn off terminal bell in subsystem linux
     ```
     $ sudo vi /etc/inputrc
