@@ -430,6 +430,10 @@
 
 ## Shell
 
+  - rename files/directories by regexp with find command (checked on Ubuntu)
+    ```
+    find . -type f -name "*OldFileName*" -exec rename -v 's/OldFile/new_file/' {} \;
+    ```
   - diff
     - diff a.txt b.txt    # normal diff
       - `3c3`: 3-line num, c-change (d-delete, a-addition), 3-line number
