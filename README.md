@@ -3,8 +3,8 @@
 <!-- MarkdownTOC levels="1, 2, 3, 4" autolink="true" style="unordered" -->
 
 - [Git](#git)
-  - [branch](#branch)
-  - [submodule](#submodule)
+	- [branch](#branch)
+	- [submodule](#submodule)
 - [Windows](#windows)
 - [macOS](#macos)
 - [Markdown](#markdown)
@@ -248,6 +248,8 @@
 
 ## Windows
 
+  - Outlook rules of same email address with different names
+    - https://www.msoutlook.info/question/sender-name-contains-specific-text-rule
   - Manage stored certificates 
     - Win+R `control keymgr.dll`
     - Control Panel\All Control Panel Items\Credential Manager
