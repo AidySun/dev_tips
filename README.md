@@ -28,6 +28,8 @@
 
 ## Git
 
+  - stash specific files
+    - `git stash -- <file>`
   - speed up clone: `git clone https://github.com.cnpmjs.org/xxxxx/xxxxxxx.git`
   - Fatal: Refusing to merge unrelated histories
     New repo was created via UI with init commit. 
