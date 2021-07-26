@@ -2,24 +2,27 @@
 
 <!-- MarkdownTOC levels="1, 2, 3, 4" autolink="true" style="unordered" -->
 
-- [Git](#git)
-	- [checkout/reset/revert/clean](#checkoutresetrevertclean)
-	- [stash](#stash)
-	- [branch](#branch)
-	- [submodule](#submodule)
-- [Windows](#windows)
-- [macOS](#macos)
-- [Markdown](#markdown)
-- [Shell](#shell)
-- [Vim](#vim)
-- [Python](#python)
-- [Chrome](#chrome)
-- [Ubuntu](#ubuntu)
-- [CentOS](#centos)
-- [Java](#java)
-- [CPP](#cpp)
-- [XPath](#xpath)
-- [VMWare](#vmware)
+- [TOC](#toc)
+  - [Git](#git)
+    - [checkout/reset/revert/clean](#checkoutresetrevertclean)
+    - [stash](#stash)
+- [this won't actually un-stage a file, it just works for the new files that staged.](#this-wont-actually-un-stage-a-file-it-just-works-for-the-new-files-that-staged)
+- [it stages the removal file from the repo but leaves the file in your working tree](#it-stages-the-removal-file-from-the-repo-but-leaves-the-file-in-your-working-tree)
+    - [branch](#branch)
+    - [submodule](#submodule)
+  - [Windows](#windows)
+  - [macOS](#macos)
+  - [Markdown](#markdown)
+  - [Shell](#shell)
+  - [Vim](#vim)
+  - [Python](#python)
+  - [Chrome](#chrome)
+  - [Ubuntu](#ubuntu)
+  - [CentOS](#centos)
+  - [Java](#java)
+  - [CPP](#cpp)
+  - [XPath](#xpath)
+  - [VMWare](#vmware)
 
 <!-- /MarkdownTOC -->
 
@@ -247,6 +250,12 @@
   2. rm -rf .git/modules/a/submodule
   3. git rm -f a/submodule
   ```
+
+- Reinit all local submodules / cleanup messed submodules
+  1. remove all submodules in `.git/config`
+  2. empty folder `.git/modules/*`
+  3. empty real path of submodules (may refer to the pathes in `.gitmodules`) 
+  4. `git submodule update --init --recursive`
 
 ## Windows
 
