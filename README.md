@@ -384,6 +384,8 @@
 - find by name and execute command to results
   ```shell
   find . -iname 'xc*data' -exec git rm -r --cached {} \;
+  # exec two grep commands, the 2nd one is based on 1st one's result
+  find . -iname "*.ts"  -exec sh -c "grep  -H 'dt.an.13.030' -A 2 {} | grep -H '<translation>' " \;
   ```
   
 - list exported symbols of shared library
