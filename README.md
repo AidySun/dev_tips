@@ -23,6 +23,9 @@
   - [CPP](#cpp)
   - [XPath](#xpath)
   - [VMWare](#vmware)
+  - [UML](#uml)
+      - [Class relationship](#class-relationship)
+      - [Composition v.s. Aggregation](#composition-vs-aggregation)
 
 <!-- /MarkdownTOC -->
 
@@ -564,6 +567,8 @@
 
 ## Vim
 
+- case [in-]sensitive search with `\c`: E.g. `/InSensitive\c`
+ 
 - Hide vim to background
   ```
   # in vim
@@ -718,7 +723,27 @@
   - Switch back to vmware with `Alt+Tab` then `Ctrl+g`
 
 
+## UML
 
+#### Class relationship
+
+1. extension : `<|--`
+1. composition : `*--`
+1. aggregration : `o--`
+ 
+#### Composition v.s. Aggregation
+
+- Composition
+  - Composite aggregation is a subtype of aggregation relation with characteristics as:
+    - It is a two-way association between the objects.
+    - It is a whole/part relationship.
+    - If a composite is deleted, all other parts associated with it are deleted.
+  - The folder could contain many files, while each File has exactly one Folder parent. If a folder is deleted, all contained files are removed as well.
+  - `Folder "1" *-- "many" File` 
+- Aggregation
+  - Let us consider an example of a car and a wheel.
+  - A car needs a wheel to function correctly, but a wheel doesn't always need a car. It can also be used with the bike, bicycle, or any other vehicles but not a particular car. Here, the wheel object is meaningful even without the car object. Such type of relationship is called UML Aggregation relation.
+  - `Car "1" o-- "many" Wheel : aggregation` 
 
 
 
