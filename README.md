@@ -54,6 +54,9 @@
 - Or untracked directories (e.g., new or automatically generated directories):
   ` git clean -fd `
 
+- Checkout and switch to anothe remote branch
+  ` git checkout -b <local_branch_name> <remote_name>/<remote_branch_name>`
+
 ### stash 
 
 - stash specific files
