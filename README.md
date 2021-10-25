@@ -150,6 +150,8 @@
     git reset --hard <commit>
     git push origin master --force
     ```
+  - For local changes, rollbace/rebase one commit
+  - `git rebase -i xxxxx^`
 - show history and diff with file names
   ```
   git log --stat --oneline
@@ -455,6 +457,11 @@
 - [Paste to Markdown](http://euangoddard.github.io/clipboard2markdown/)
 
 ## Shell
+
+- replace text content recursively
+```
+find . -type f -name "config" -exec sed -i 's/aaa/bbb/g' {} \;
+```
 
 - rename files/directories by regexp with find command (checked on Ubuntu)
   ```
