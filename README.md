@@ -459,9 +459,10 @@
 ## Shell
 
 - replace text content recursively
-```
-find . -type f -name "config" -exec sed -i 's/aaa/bbb/g' {} \;
-```
+  ```
+  find . -type f -name "config" -exec sed -i 's/aaa/bbb/g' {} \;
+  ```
+- sort file by size: `du -h -d 1 | sort -h -r `
 
 - rename files/directories by regexp with find command (checked on Ubuntu)
   ```
