@@ -15,6 +15,7 @@
   - [Markdown](#markdown)
   - [Shell](#shell)
   - [Vim](#vim)
+    - [tabs](#tabs)
   - [Python](#python)
   - [Chrome](#chrome)
   - [Ubuntu](#ubuntu)
@@ -632,6 +633,28 @@
 - Plugin
   - https://github.com/junegunn/vim-plug/wiki/tutorial
   - https://github.com/peterhoeg/vim-qml
+
+### tabs
+
+- open multiple files in diff tabs: vi -p f1.txt f2.txt
+- navigation between tabs:
+  - command mode:
+    ```
+    :tabn # go to next tab
+    :tabp # go to previous tab
+    :tabnew # create a new tab
+    :tabclose # close a new tab
+    :tabclose {i} # close the tab in postion {i}
+    :tabe {file} # edit in new tab
+    :tabfirst # go to first
+    :tabm 0  # move to first
+    ```
+  - normal mode:
+    ```
+    gt    # go to next tab
+    gT    # go to previous tab
+    {i}gt # go to tab in position i
+    ```
 
 ## Python
 
