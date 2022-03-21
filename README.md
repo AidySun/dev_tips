@@ -46,7 +46,7 @@
   - **Warning this will reset all of your unpushed commits to master!:**
   ` git reset `
 
-- If you want to revert a change that you have committed, do this:
+- If you want to revert a change that you have committed, do this: (it will generate a new revert commit in git log)
   ` git revert <commit 1> <commit 2> `
 
 - If you want to remove untracked files (e.g., new files, generated files):
