@@ -115,7 +115,7 @@
   ```
 - stop tracking a file/directory
   ```shell
-  git rm [-r] --cached filename/[directory_name]
+  git rm [-r] --cached filename/[directory_name] # --cached will keep the removed file locally
   or
   git update-index --assume-unchanged filename
   ```
