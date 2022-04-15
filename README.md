@@ -46,6 +46,8 @@
   - **Warning this will reset all of your unpushed commits to master!:**
   ` git reset `
 
+- reset --soft a specified file with path
+  `git reset <commitid> -- path/to/file`
 - If you want to revert a change that you have committed, do this: (it will generate a new revert commit in git log)
   ` git revert <commit 1> <commit 2> `
 
