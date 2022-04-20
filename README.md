@@ -10,6 +10,7 @@
 - [it stages the removal file from the repo but leaves the file in your working tree](#it-stages-the-removal-file-from-the-repo-but-leaves-the-file-in-your-working-tree)
     - [branch](#branch)
     - [submodule](#submodule)
+    - [.git](#git-1)
   - [Windows](#windows)
   - [macOS](#macos)
   - [Markdown](#markdown)
@@ -267,6 +268,15 @@
   2. empty folder `.git/modules/*`
   3. empty real path of submodules (may refer to the pathes in `.gitmodules`) 
   4. `git submodule update --init --recursive`
+
+### .git
+
+- shrink huge `.git/objects`
+  ```
+  git fsck 
+  git prune
+  ```
+
 
 ## Windows
 
