@@ -6,11 +6,10 @@
   - [Git](#git)
     - [checkout/reset/revert/clean](#checkoutresetrevertclean)
     - [stash](#stash)
-- [this won't actually un-stage a file, it just works for the new files that staged.](#this-wont-actually-un-stage-a-file-it-just-works-for-the-new-files-that-staged)
-- [it stages the removal file from the repo but leaves the file in your working tree](#it-stages-the-removal-file-from-the-repo-but-leaves-the-file-in-your-working-tree)
     - [branch](#branch)
     - [submodule](#submodule)
     - [.git](#git-1)
+    - [git log](#git-log)
   - [Windows](#windows)
   - [macOS](#macos)
   - [Markdown](#markdown)
@@ -172,8 +171,8 @@
   git reset -- <file>
   ```
   <pre><code>
-  # this won't actually un-stage a file, it just works for the new files that staged.
-  # it stages the removal file from the repo but leaves the file in your working tree
+  this won't actually un-stage a file, it just works for the new files that staged.
+  it stages the removal file from the repo but leaves the file in your working tree
   <del>git rm --cached <file></del></code></pre>
 - rename a tag
   ```shell
@@ -277,6 +276,12 @@
   git prune
   ```
 
+### git log
+
+- show diff between branches, show differences in `branch2` comparing to `branch1`
+  ```
+  git log --cherry branch1..branch2
+  ```
 
 ## Windows
 
