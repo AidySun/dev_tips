@@ -211,10 +211,17 @@
   git checkout another_branch ./file1 ./file2
   ```
 - [show branch name in bash command prompt](#show_branch_name_in_bash_command_prompt)
+
 - checkout one remote branch to local 
   ```
   git checkout --track origin/branch
   # --track is shorthand for -b [local_branch] [remote]/[branch]
+  ```
+  or
+  ```
+  git fetch origin anotherBranch:localBranch
+  git branch
+  git checkout localBranch
   ```
 - delete remote branch 
   ```
