@@ -25,8 +25,6 @@
   - [XPath](#xpath)
   - [VMWare](#vmware)
   - [UML](#uml)
-      - [Class relationship](#class-relationship)
-      - [Composition v.s. Aggregation](#composition-vs-aggregation)
 
 <!-- /MarkdownTOC -->
 
@@ -143,7 +141,10 @@
   #    1. find the commit deleted the file
   git rev-list -n 1 HEAD -- <deleted_file_path>
   #    2. checkout to the previous commit of commit deleted the file
-  git checkout <delete_commit>^ -- <deleted_file_path>
+  git log -- <deleted_file_path>
+  git checkout <delete_commit>^ -- <deleted_file_path> 
+  #or
+  git checkout <before_delete_commit> -- <deleted_file_path> 
   ```
 - rollback a specific history commit
   - `git revert` undo the effects of only a certain commit
