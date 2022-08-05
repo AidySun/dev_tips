@@ -10,6 +10,7 @@
     - [submodule](#submodule)
     - [.git](#git-1)
     - [git log](#git-log)
+    - [tilde(~) caret(^) at-sign(@)](#tilde-caret-at-sign)
   - [Windows](#windows)
   - [macOS](#macos)
   - [Markdown](#markdown)
@@ -37,6 +38,10 @@
 
 ### checkout/reset/revert/clean
 
+- recover/undo previous `git reset --hard`
+  - use `git reflog` to show history
+  - use `git reset --hard <hash>` to recover the old files
+  
 - If you want to revert changes made to your working copy, do this:
   ` git checkout . `
 
@@ -290,6 +295,14 @@
   ```
   git log --cherry branch1..branch2
   ```
+
+### tilde(~) caret(^) at-sign(@)
+
+- tl;tr;
+  - `~` : goback on a straight line, one current main branch
+  - `^` : used on merge commit, HEAD^1 is main branch merged into, HEAD^2 is the side branch merged into main branch.
+  - `@` : used for the `git reflog`
+- https://www.golinuxcloud.com/git-head-caret-vs-tilde-at-sign-examples/#:~:text=The%20tilde%20%28~%29%2C%20caret%20%28%5E%29%20and%20at-sign%20%28%40%29,refer%20to%20the%20parent%20of%20that%20particular%20commit.
 
 ## Windows
 
