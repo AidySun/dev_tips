@@ -26,6 +26,7 @@
   - [XPath](#xpath)
   - [VMWare](#vmware)
   - [UML](#uml)
+  - [Opensource](#opensource)
 
 <!-- /MarkdownTOC -->
 
@@ -818,8 +819,10 @@
   - `Car "1" o-- "many" Wheel : aggregation` 
 
 
+## Opensource
 
-
+- How to design a version-compatible library
+  - https://ometer.com/parallel.html
 
 
 
