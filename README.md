@@ -4,12 +4,13 @@
 
 1. [Git](#git)
    1. [checkout/reset/revert/clean](#checkoutresetrevertclean)
-   2. [stash](#stash)
-   3. [branch](#branch)
-   4. [submodule](#submodule)
-   5. [.git](#git-1)
-   6. [git log](#git-log)
-   7. [tilde(~) caret(^) at-sign(@)](#tilde-caret-at-sign)
+   2. [Merge / Conflict](#merge--conflict)
+   3. [stash](#stash)
+   4. [branch](#branch)
+   5. [submodule](#submodule)
+   6. [.git](#git-1)
+   7. [git log](#git-log)
+   8. [tilde(~) caret(^) at-sign(@)](#tilde-caret-at-sign)
 2. [Windows](#windows)
 3. [macOS](#macos)
 4. [Markdown](#markdown)
@@ -25,8 +26,8 @@
 13. [XPath](#xpath)
 14. [VMWare](#vmware)
 15. [UML](#uml)
-      1. [Class relationship](#class-relationship)
-      2. [Composition v.s. Aggregation](#composition-vs-aggregation)
+       1. [Class relationship](#class-relationship)
+       2. [Composition v.s. Aggregation](#composition-vs-aggregation)
 16. [Opensource](#opensource)
 
 <!-- /MarkdownTOC -->
@@ -64,6 +65,14 @@
 
 - Checkout and switch to anothe remote branch
   ` git checkout -b <local_branch_name> <remote_name>/<remote_branch_name>`
+
+### Merge / Conflict
+
+- fix conflict by accepting others/ours
+```
+git checkout --theirs <conflicted_file>
+git checkout --ours <conflicted_file>
+```
 
 ### stash 
 
