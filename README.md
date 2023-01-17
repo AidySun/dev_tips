@@ -63,7 +63,7 @@
 - Or untracked directories (e.g., new or automatically generated directories):
   ` git clean -fd `
 
-- Checkout and switch to anothe remote branch
+- checkout remote branch to local with diff name
   ` git checkout -b <local_branch_name> <remote_name>/<remote_branch_name>`
 
 ### Merge / Conflict
