@@ -4,6 +4,7 @@
 2. [2D](#2d)
    1. [Classes](#classes)
       1. [Structure](#structure)
+   2. [ConvasLayer](#convaslayer)
 3. [Control](#control)
 4. [Transform](#transform)
 5. [Process](#process)
@@ -56,6 +57,11 @@ CanvasItem <|-- Node2D
 
 @enduml
 ```
+
+### ConvasLayer
+
+- ConvaLayers are independent of tryy order, and they only depend on their layer number.
+- 2D nodes have `CanvasItem.z_index` property controlling their drawing order.
 
 ## Control
 
