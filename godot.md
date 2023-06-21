@@ -1,15 +1,27 @@
 # godot
 
 1. [Common](#common)
+   1. [Texture](#texture)
 2. [2D](#2d)
    1. [Classes](#classes)
-      1. [Structure](#structure)
+      1. [Comman class description](#comman-class-description)
+      2. [Sprite2D](#sprite2d)
+      3. [AnimatedSprite2D](#animatedsprite2d)
+      4. [AnimationPlayer](#animationplayer)
+      5. [Tween](#tween)
+         1. [Tween v.s. AnimationPlayer](#tween-vs-animationplayer)
+      6. [AnimationTree](#animationtree)
+      7. [CollisionObject2D](#collisionobject2d)
+      8. [Area2D](#area2d)
+      9. [CollisionPolygon2D](#collisionpolygon2d)
+      10. [CollisionShape2D](#collisionshape2d)
    2. [ConvasLayer](#convaslayer)
 3. [Control](#control)
 4. [Transform](#transform)
-5. [Process](#process)
+5. [Physics \& Collision](#physics--collision)
+6. [Process](#process)
    1. [Console Porting](#console-porting)
-6. [References](#references)
+7. [References](#references)
    1. [Diff Resolution](#diff-resolution)
       1. [Hardware Survey by Steam](#hardware-survey-by-steam)
 
@@ -18,9 +30,48 @@
 
 - The coordinate origin `(0, 0)` in Godot is top-left corner of the screen.
 
+### Texture
+
+```text
+In the Godot engine, a texture is a resource that represents an image or graphical data. It can be used in various ways, such as:
+
+1. Sprite Textures: Textures can be assigned to the texture property of a Sprite node to define what image or graphic should be displayed.
+
+2. Materials: Textures can be used as part of a material to define the visual appearance of 3D objects. They can control properties such as color, reflectivity, roughness, and more.
+
+3. GUI Elements: Textures can be used for creating custom GUI elements, such as buttons, icons, or backgrounds, by assigning them to appropriate control nodes.
+
+4. Shaders: Textures can be accessed and manipulated within custom shaders to create advanced visual effects.
+
+Textures can be sourced from various file formats, such as PNG, JPEG, or BMP, and can be imported into the Godot engine's resource system.
+
+```
+
 ## 2D 
 
 ### Classes
+
+```plantuml
+@startuml
+
+Object <|-- Node
+Object <|-- RefCounted
+Node <|-- CanvasItem
+CanvasItem <|-- Control
+CanvasItem <|-- Node2D
+Node2D <|-- AnimatedSprite2D
+Node2D <|-- Sprite2D
+Node2D <|-- CollisionObject2D
+Node2D <|-- CollisionPolygon2D
+Node2D <|-- CollisionShape2D
+Node <|-- AnimationPlayer
+Node <|-- AnimationTree
+RefCounted <|-- Tween
+CollisionObject2D <|-- Area2D
+@enduml
+```
+
+#### Comman class description
 
 ```
 Node2D:
@@ -45,18 +96,98 @@ CollisionShape2D:
 CollisionShape2D是用于定义2D物理碰撞形状的节点。它可与KinematicBody2D或RigidBody2D一起使用，以检测与其他对象的碰撞。
 ```
 
-#### Structure
+#### Sprite2D
 
-```plantuml
-@startuml
+A node that displays a 2D texture. 
 
-Object <|-- Node
-Node <|-- CanvasItem
-CanvasItem <|-- Control
-CanvasItem <|-- Node2D
+Properties:
+  ```
+  bool flip_h/flip_v, int frame, int hframes/vframes, Textture2D textture, Rect2 region_rect, ...
+  ```
 
-@enduml
-```
+
+#### AnimatedSprite2D
+
+Similar to `Sprite2D`, except it carries multiple textures as animation frames. Animations are created using a `SpriteFrames`.
+
+- Properties:
+  ```
+  SpriteFrames sprite_frames, StringName animation, String autoplay, float speed_scale, ...
+  ```
+- Methods:
+  ```
+  play(name, speed, from_end), stop(), pause(), is_palying(), get_playing_speed(), ...
+  ```
+  - `play()`
+    If this method is called with that same animation name, or with no name parameter, the assigned animation will resume playing if it was paused.
+
+#### AnimationPlayer
+
+Player of `Animation` resources.
+
+`AnimationPlayer` is more suited than `Tween` for animations where you know the final values in advance.
+
+#### Tween
+
+Tweens are mostly useful for animations requiring a numerical property to be interpolated over a range of values. The name tween comes from in-betweening, an animation technique where you specify keyframes and the computer interpolates the frames that appear between them.
+
+##### Tween v.s. AnimationPlayer
+
+Tween is more suited than AnimationPlayer for animations where you don't know the final values in advance. For example, interpolating a dynamically-chosen camera zoom value is best done with a Tween; it would be difficult to do the same thing with an AnimationPlayer node. 
+
+#### AnimationTree
+
+A node to be used for advanced animation transitions in an AnimationPlayer.
+
+#### CollisionObject2D
+
+**Base node** for 2D collision objects.
+**Note:** `Only collisions between objects within the same canvas (Viewport canvas or CanvasLayer) are supported.`
+
+- Properties:
+  ```
+  int collision_layer, int collision_mask, float collision_priority, DisableMode disable_mode, bool input_pickable
+  ```
+  - `int collision_layer`: the physic layer this `CollisionObject2D` is in.
+  - `int collision_mask`: the physics layers this `CollisionObjet2D` scans.
+    **Note:** `Object A can detect a contact with object B only if object B is in any of the layers that object A scans.`
+  - `float collision_priority`: The priority used to solve colliding when occurring penetration. The higher the priority is, the lower the penetration into the object will be.
+- Methods:
+  ```
+  _input_event(), mouse_enter(), 
+  ```
+
+#### Area2D
+
+2D area for detection (detects `CollisionObject2D` nodes overlapping, entering, or exiting), as well as physics and audio influence.
+
+- Projecties:
+  ```
+  float gravity, foloat angular_damp, Vector2 gravity_direction,
+  ```
+- Methods:
+  ```
+  Area2D[] get_overlapping_areas();
+  Node2D[] get_overlapping_bodies();
+  bool has_overlapping_areas();
+  bool overlaps_bodies(Node body);
+  ```
+- Signals:
+  ```
+  area_entered ( Area2D area ), body_exited ( Node2D body )
+  ```
+
+#### CollisionPolygon2D
+
+Provides a concave or convex 2D collision polygon to a `CollisionObject2D` parent.
+
+#### CollisionShape2D
+
+- `one_way_collision`: Sets whether this collision shape should only detect collision on one side (top or bottom).
+  **Note:** This property has no effect if this CollisionShape2D is a child of an Area2D node.
+
+
+--------
 
 ### ConvasLayer
 
@@ -73,6 +204,11 @@ CanvasItem <|-- Node2D
 
 > Keep in mind, however, that it is generally not desired to work with screen coordinates. The recommended approach is to simply work in Canvas coordinates (CanvasItem.get_global_transform()), to allow automatic screen resolution resizing to work properly.
   - [2D Transforms](https://docs.godotengine.org/en/stable/tutorials/2d/2d_transforms.html)
+
+## Physics & Collision
+
+- [Physics introduction](https://docs.godotengine.org/en/stable/tutorials/physics/physics_introduction.html#collision-layers-and-masks)
+
 
 ## Process
 
