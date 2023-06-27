@@ -19,6 +19,12 @@
 3. [Control](#control)
 4. [Transform](#transform)
 5. [Physics \& Collision](#physics--collision)
+   1. [4 collision object types](#4-collision-object-types)
+      1. [1-`Area2D`](#1-area2d)
+      2. [2-`StaticBody2D`](#2-staticbody2d)
+      3. [3-`RigidBody2D`](#3-rigidbody2d)
+      4. [4-`CharacterBody2D`](#4-characterbody2d)
+   2. [Collision layers and masks](#collision-layers-and-masks)
 6. [Process](#process)
    1. [Console Porting](#console-porting)
 7. [References](#references)
@@ -209,6 +215,56 @@ Provides a concave or convex 2D collision polygon to a `CollisionObject2D` paren
 
 - [Physics introduction](https://docs.godotengine.org/en/stable/tutorials/physics/physics_introduction.html#collision-layers-and-masks)
 
+### 4 collision object types
+
+```plantuml
+CollisionObject2D <|-- Area2D
+CollisionObject2D <|-- StaticBody2D
+CollisionObject2D <|-- RigidBody2D
+CollisionObject2D <|-- CharacterBody2D
+PhysicsBody2D <|-- StaticBody2D
+PhysicsBody2D <|-- RigidBody2D
+PhysicsBody2D <|-- CharacterBody2D
+StaticBody2D *-- PhysicsMaterial
+RigidBody2D *-- PhysicsMaterial
+CollisionShape2D
+CollisionPolygon2D
+```
+
+```
+friction 摩擦
+bounce 回弹
+impulses 冲量
+absorbent  吸附/吸收
+```
+
+#### 1-`Area2D`
+  provide detection (detect bodies enter/exit and emit signals) and influence (physic effect?). Can also override physics properties (gravity, damping)
+#### 2-`StaticBody2D`
+  collision detection but not move in response to collision. Are most often used for environment object (not moved).
+#### 3-`RigidBody2D`
+  this node implements simulated 2D physics. apply a force (gravity, impulses...) to it, engine calculates the resulting movement, you don't control it directly.
+#### 4-`CharacterBody2D`
+  collision detection, but no physics (influence). movement and collision response must be implemented in code.
+
+**IMPORTTANT NOTE:** _never scale a collision shape, keep its `scale` proper always be `(1,1)`._
+
+- physics engine runs in a fix rate (60 iterations per second by default)
+  - it's diff from *frame rate*. 
+- idle processing: code runs each frame
+- physics processing: code runs on each physics tick
+
+
+- `Node._physics_process(delta)` is called before each physics step
+  - `delta` parameter means *time passsed since last step*, by defualt it should be `1/60`, but not always
+  - always use `delta` in your physisc calculation
+
+### Collision layers and masks
+
+Ref to [CollisionObject2D section](#collisionobject2d).
+
+- `collision_layer`: layers that the object appears in. by default layer 1.
+- `collision_mask`: layers the body will scan for collision. by default 1.
 
 ## Process
 
