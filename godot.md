@@ -24,10 +24,12 @@
       2. [2-`StaticBody2D`](#2-staticbody2d)
       3. [3-`RigidBody2D`](#3-rigidbody2d)
       4. [4-`CharacterBody2D`](#4-characterbody2d)
+         1. [Character collision response](#character-collision-response)
    2. [Collision layers and masks](#collision-layers-and-masks)
 6. [Process](#process)
    1. [Console Porting](#console-porting)
-7. [References](#references)
+7. [Ideas](#ideas)
+8. [References](#references)
    1. [Diff Resolution](#diff-resolution)
       1. [Hardware Survey by Steam](#hardware-survey-by-steam)
 
@@ -211,6 +213,8 @@ Provides a concave or convex 2D collision polygon to a `CollisionObject2D` paren
 > Keep in mind, however, that it is generally not desired to work with screen coordinates. The recommended approach is to simply work in Canvas coordinates (CanvasItem.get_global_transform()), to allow automatic screen resolution resizing to work properly.
   - [2D Transforms](https://docs.godotengine.org/en/stable/tutorials/2d/2d_transforms.html)
 
+--------
+
 ## Physics & Collision
 
 - [Physics introduction](https://docs.godotengine.org/en/stable/tutorials/physics/physics_introduction.html#collision-layers-and-masks)
@@ -246,6 +250,11 @@ absorbent  吸附/吸收
   this node implements simulated 2D physics. apply a force (gravity, impulses...) to it, engine calculates the resulting movement, you don't control it directly.
 #### 4-`CharacterBody2D`
   collision detection, but no physics (influence). movement and collision response must be implemented in code.
+##### Character collision response
+
+- `move_and_colide`
+- `move_and_slide`
+  **WARN:** move_and_slide() automatically includes the timestep in its calculation, so **you should not multiply the velocity vector by delta.**
 
 **IMPORTTANT NOTE:** _never scale a collision shape, keep its `scale` proper always be `(1,1)`._
 
@@ -265,6 +274,10 @@ Ref to [CollisionObject2D section](#collisionobject2d).
 
 - `collision_layer`: layers that the object appears in. by default layer 1.
 - `collision_mask`: layers the body will scan for collision. by default 1.
+
+Assign names to layers: `Project Settings -> Layer Names`
+
+--------
 
 ## Process
 
@@ -288,6 +301,14 @@ Ref to [CollisionObject2D section](#collisionobject2d).
   Due to the complexity of the process, many studios and developers prefer to outsource console porting.
   ```
 
+--------
+
+## Ideas
+
+- Angry birds: RigidBody2D
+
+
+--------
 
 ## References
 
