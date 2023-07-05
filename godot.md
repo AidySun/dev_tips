@@ -19,13 +19,15 @@
 3. [Control](#control)
 4. [Transform](#transform)
 5. [Physics \& Collision](#physics--collision)
-   1. [4 collision object types](#4-collision-object-types)
+   1. [Terminology](#terminology)
+   2. [4 collision object types](#4-collision-object-types)
       1. [1-`Area2D`](#1-area2d)
       2. [2-`StaticBody2D`](#2-staticbody2d)
       3. [3-`RigidBody2D`](#3-rigidbody2d)
       4. [4-`CharacterBody2D`](#4-characterbody2d)
-         1. [Character collision response](#character-collision-response)
-   2. [Collision layers and masks](#collision-layers-and-masks)
+         1. [`move_and_slide` \& `move_and_collide`](#move_and_slide--move_and_collide)
+         2. [Character collision response](#character-collision-response)
+   3. [Collision layers and masks](#collision-layers-and-masks)
 6. [Process](#process)
    1. [Console Porting](#console-porting)
 7. [Ideas](#ideas)
@@ -36,7 +38,7 @@
 
 ## Common
 
-- The coordinate origin `(0, 0)` in Godot is top-left corner of the screen.
+- The coordinate origin `(0, 0)` in Godot is **top-left corner** of the screen.
 
 ### Texture
 
@@ -192,7 +194,7 @@ Provides a concave or convex 2D collision polygon to a `CollisionObject2D` paren
 #### CollisionShape2D
 
 - `one_way_collision`: Sets whether this collision shape should only detect collision on one side (top or bottom).
-  **Note:** This property has no effect if this CollisionShape2D is a child of an Area2D node.
+  **NOTE:** This property has no effect if this CollisionShape2D is a child of an Area2D node.
 
 
 --------
@@ -219,6 +221,15 @@ Provides a concave or convex 2D collision polygon to a `CollisionObject2D` paren
 
 - [Physics introduction](https://docs.godotengine.org/en/stable/tutorials/physics/physics_introduction.html#collision-layers-and-masks)
 
+### Terminology
+
+```
+friction 摩擦
+bounce 回弹
+impulses 冲量
+absorbent  吸附/吸收
+```
+
 ### 4 collision object types
 
 ```plantuml
@@ -235,28 +246,61 @@ CollisionShape2D
 CollisionPolygon2D
 ```
 
-```
-friction 摩擦
-bounce 回弹
-impulses 冲量
-absorbent  吸附/吸收
-```
 
 #### 1-`Area2D`
   provide detection (detect bodies enter/exit and emit signals) and influence (physic effect?). Can also override physics properties (gravity, damping)
+  - `Area2D` is great for overlap detecting withoud physic collision/effect.
+    - Coin collection
+    - bullet damage
+
 #### 2-`StaticBody2D`
   collision detection but not move in response to collision. Are most often used for environment object (not moved).
 #### 3-`RigidBody2D`
   this node implements simulated 2D physics. apply a force (gravity, impulses...) to it, engine calculates the resulting movement, you don't control it directly.
 #### 4-`CharacterBody2D`
-  collision detection, but no physics (influence). movement and collision response must be implemented in code.
+  collision detection, ~~but no physics (influence)~~ (not affected by physics engine properties ???). movement and collision response must be implemented in code.
+
+##### `move_and_slide` & `move_and_collide`
+  - sample with godot 3.x, indicates `move_and_slide` and `move_and_collide` can be used in `_physics_process`
+  ```javascript
+  extends KinematicBody2D
+
+  func _physics_process(delta: float) -> void:
+      var velocity = Vector2.ZERO
+
+      # Apply movement logic to the velocity vector here
+
+      # Use move_and_slide for smooth sliding motion on floors and slopes
+      velocity = move_and_slide(velocity, Vector2.UP)
+
+      # Use move_and_collide for explicit collision handling with walls or other objects
+      var collision = move_and_collide(velocity)
+
+      # Handle collision responses based on the collision information
+      if collision:
+          # Custom collision response logic here
+          
+      # Perform other physics-related calculations or actions here
+
+      # ========================== added by me
+      ## in godot 4.x, move_and_collide should work witd delta, move_and_slide should not.
+      # move_and_collide(velocity * delta)
+      # move_and_slide()
+  }
+
+  ```
+
+- One way to think of it is that move_and_slide() is a special case, and move_and_collide() is more general.
+- anythins you do with `move_and_slide` can also be don2 with `move_and_collide`. Not vice verse.
+
 ##### Character collision response
 
 - `move_and_colide`
 - `move_and_slide`
   **WARN:** move_and_slide() automatically includes the timestep in its calculation, so **you should not multiply the velocity vector by delta.**
 
-**IMPORTTANT NOTE:** _never scale a collision shape, keep its `scale` proper always be `(1,1)`._
+###### **IMPORTTANT NOTE:** 
+  _never scale a collision shape, keep its `scale` proper always be `(1,1)`._
 
 - physics engine runs in a fix rate (60 iterations per second by default)
   - it's diff from *frame rate*. 
@@ -266,7 +310,7 @@ absorbent  吸附/吸收
 
 - `Node._physics_process(delta)` is called before each physics step
   - `delta` parameter means *time passsed since last step*, by defualt it should be `1/60`, but not always
-  - always use `delta` in your physisc calculation
+  - always use `delta` in your physics calculation
 
 ### Collision layers and masks
 
