@@ -293,6 +293,42 @@ CollisionPolygon2D
 - One way to think of it is that move_and_slide() is a special case, and move_and_collide() is more general.
 - anythins you do with `move_and_slide` can also be don2 with `move_and_collide`. Not vice verse.
 
+###### `move_and_slide`
+
+- defined in `CharacterBody2D`
+- related properties
+  - `velocity: Vector2` - pixels per second, used and modified duing calls to `move_and_slice`
+  - `motion_mode`
+  - `up_direction`
+  - `floor_stop_on_slope`
+  - `wall_min_slide_angle`
+  - `floor_max_angle`
+- handle collision
+  - `get_slide_collision_count` and `get_slid_collision`
+  ```
+  # Using move_and_slide.
+  move_and_slide()
+  for i in get_slide_collision_count():
+      var collision = get_slide_collision(i)
+      print("I collided with ", collision.get_collider().name)
+  ```
+
+
+###### `move_and_collide`
+
+- defined in `PhysicsBody2D`
+- `KinematicCollision2D move_and_collide ( Vector2 motion, bool test_only=false, float safe_margin=0.08, bool recovery_as_collision=false )`
+  - the parameter `motion` generally is the velocity vector multipled by `delta` of `_physics_process(delta)`
+
+- handle collision by the returned `KinematicCollision2D`
+  ```
+  # Using move_and_collide.
+  var collision = move_and_collide(velocity * delta)
+  if collision:
+      print("I collided with ", collision.get_collider().name)
+  ```
+- usage sample: bullet collides with body/wall
+
 ##### Character collision response
 
 - `move_and_colide`
