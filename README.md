@@ -318,6 +318,8 @@ git checkout --ours <conflicted_file>
 
 ## Windows
 
+- search files by size in Explorer with keywords like `* size:>50MB<100MB`
+
 - Hide cmd window after launching an exe file in a bat/cmd file. Using `start` command.
   ```
   @echo off
