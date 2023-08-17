@@ -43,7 +43,7 @@
 ### Texture
 
 ```text
-In the Godot engine, a texture is a resource that represents an image or graphical data. It can be used in various ways, such as:
+A resource that represents an image or graphical data. It can be used in various ways, such as:
 
 1. Sprite Textures: Textures can be assigned to the texture property of a Sprite node to define what image or graphic should be displayed.
 
@@ -233,17 +233,28 @@ absorbent  吸附/吸收
 ### 4 collision object types
 
 ```plantuml
+Node <|-- CanvasItem
+CanvasItem <|-- Node2D
+Node2D <|-- CollisionObject2D: abstract base class for 2D physics objects
+
 CollisionObject2D <|-- Area2D
-CollisionObject2D <|-- StaticBody2D
-CollisionObject2D <|-- RigidBody2D
-CollisionObject2D <|-- CharacterBody2D
-PhysicsBody2D <|-- StaticBody2D
-PhysicsBody2D <|-- RigidBody2D
+class PhysicsBody2D {
++ func move_and_collide
+}
+CollisionObject2D <|-- PhysicsBody2D
+
 PhysicsBody2D <|-- CharacterBody2D
+class CharacterBody2D {
++ func move_and_slide
+}
+
+PhysicsBody2D <|-- RigidBody2D
+PhysicsBody2D <|-- StaticBody2D
+PhysicsBody2D <|-- RigidBodatprorBody2D
 StaticBody2D *-- PhysicsMaterial
 RigidBody2D *-- PhysicsMaterial
-CollisionShape2D
-CollisionPolygon2D
+Node2D <|-- CollisionShape2D
+Node2D <|-- CollisionPolygon2D
 ```
 
 
@@ -260,8 +271,11 @@ CollisionPolygon2D
 #### 4-`CharacterBody2D`
   collision detection, ~~but no physics (influence)~~ (not affected by physics engine properties ???). movement and collision response must be implemented in code.
 
+- **NOTE:** <u> NEVER scale collision shape in editor. Scale property in Inspector should remain `(1,1)`. To change the size, using size handles, not the scale of `Node2D` </u>
+
 ##### `move_and_slide` & `move_and_collide`
   - sample with godot 3.x, indicates `move_and_slide` and `move_and_collide` can be used in `_physics_process`
+
   ```javascript
   extends KinematicBody2D
 
@@ -283,21 +297,21 @@ CollisionPolygon2D
       # Perform other physics-related calculations or actions here
 
       # ========================== added by me
-      ## in godot 4.x, move_and_collide should work witd delta, move_and_slide should not.
+      ## in godot 4.x, move_and_collide should work with delta, move_and_slide should not.
       # move_and_collide(velocity * delta)
       # move_and_slide()
   }
 
   ```
 
-- One way to think of it is that move_and_slide() is a special case, and move_and_collide() is more general.
-- anythins you do with `move_and_slide` can also be don2 with `move_and_collide`. Not vice verse.
+- One way to think of it is that `move_and_slide()` is a special case, and `move_and_collide()` is more general.
+- anythins you do with `move_and_slide` can also be done with `move_and_collide`. Not vice verse.
 
 ###### `move_and_slide`
 
 - defined in `CharacterBody2D`
 - related properties
-  - `velocity: Vector2` - pixels per second, used and modified duing calls to `move_and_slice`
+  - `velocity: Vector2` - pixels per second, used and modified duing calls to `move_and_slide`
   - `motion_mode`
   - `up_direction`
   - `floor_stop_on_slope`
