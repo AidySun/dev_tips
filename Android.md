@@ -7,6 +7,9 @@
     - [Service](#service)
     - [Content Provider](#content-provider)
   - [Binder](#binder)
+  - [OpenGL](#opengl)
+    - [View](#view)
+  - [Android vs iOS](#android-vs-ios)
 
 
 ## 4 core components
@@ -60,4 +63,20 @@ binder_open()
 binder_mmap()
 binder_ioctl()
 ```
+
+## OpenGL
+
+### View
+
+- `TextureView` : incorporate OpenGL ES graphics in a samll partion of layout
+- `GLSurfaceView[.Render]` : for full-screen or near-full screen graphics views
+- `SurfaceView` : can build up view with additional code
+
+## Android vs iOS
+
+|               |Android    |iOS      |
+|:--            |:----:     |:---:    |
+|Language       |Kotlin     |Swift    |
+|Graphic Lib    |Open GL    |Metal    |
+|a   Graphic Lib|b   Open GL|c   Metal|
 

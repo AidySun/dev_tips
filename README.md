@@ -499,10 +499,13 @@ git checkout --ours <conflicted_file>
 
 ## Markdown
 
-- Adding TOC with [MarkdownTOC](https://github.com/naokazuterada/MarkdownTOC)
+- how to add page break in Markdown
+  ```markdown
+  <div style="page-break-after: always"></div>
+  ```
 
 - bookmark
-  ```
+  ```markdown
   <a name="link_name">content to show</a>
   ...
   [reference](#link_name)
@@ -631,6 +634,12 @@ git checkout --ours <conflicted_file>
 
 ## Vim
 
+- insert continus index to starting of lines
+  ```
+  :%s/^/\=line('.').'.'
+  ```
+  - add 1, 2, 3, from line 10 to line 88 : `10,88s/^/\=line('.')-9.'.'`
+
 - case [in-]sensitive search with `\c`: E.g. `/InSensitive\c`
  
 - Hide vim to background
@@ -737,6 +746,11 @@ git checkout --ours <conflicted_file>
 
 ## Ubuntu
 
+- force to relaod `~/.tmux.conf`
+  ```
+  # in tmux
+  tmux kill-server
+  ```
 - List installed packages
   ```
   apt list --installed
