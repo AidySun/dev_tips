@@ -1,40 +1,33 @@
 # TOC
 
-<!-- MarkdownTOC levels="1, 2, 3, 4" autolink="true" style="unordered" -->
-
-1. [Git](#git)
-   1. [checkout/reset/revert/clean](#checkoutresetrevertclean)
-   2. [Merge / Conflict](#merge--conflict)
-   3. [stash](#stash)
-   4. [branch](#branch)
-   5. [submodule](#submodule)
-   6. [.git](#git-1)
-   7. [git log](#git-log)
-   8. [tilde(~) caret(^) at-sign(@)](#tilde-caret-at-sign)
-2. [Windows](#windows)
-3. [macOS](#macos)
-4. [Markdown](#markdown)
-5. [Shell](#shell)
-6. [Vim](#vim)
-   1. [tabs](#tabs)
-7. [Python](#python)
-8. [Chrome](#chrome)
-9. [Ubuntu](#ubuntu)
-10. [CentOS](#centos)
-11. [Java](#java)
-12. [CPP](#cpp)
-13. [XPath](#xpath)
-14. [VMWare](#vmware)
-15. [UML](#uml)
-       1. [Class relationship](#class-relationship)
-       2. [Composition v.s. Aggregation](#composition-vs-aggregation)
-16. [Opensource](#opensource)
-
-<!-- /MarkdownTOC -->
-
-- Others
-  - [ImageMagick Usages](./ImageMagick.md)
-  - [Math](./Math.md)
+- [Git](#git)
+  - [checkout/reset/revert/clean](#checkoutresetrevertclean)
+  - [Merge / Conflict](#merge--conflict)
+  - [stash](#stash)
+  - [branch](#branch)
+  - [submodule](#submodule)
+  - [.git](#git-1)
+  - [git log](#git-log)
+  - [tilde(~) caret(^) at-sign(@)](#tilde-caret-at-sign)
+- [Windows](#windows)
+- [macOS](#macos)
+- [Markdown](#markdown)
+- [Shell](#shell)
+- [Vim](#vim)
+  - [tabs](#tabs)
+- [Python](#python)
+- [Chrome](#chrome)
+- [Ubuntu](#ubuntu)
+- [CentOS](#centos)
+- [Java](#java)
+- [CPP](#cpp)
+- [XPath](#xpath)
+- [VMWare](#vmware)
+- [UML](#uml)
+    - [Class relationship](#class-relationship)
+    - [Composition v.s. Aggregation](#composition-vs-aggregation)
+- [Regexp](#regexp)
+- [Opensource](#opensource)
 
 ------
 
@@ -844,6 +837,20 @@ git checkout --ours <conflicted_file>
   - Let us consider an example of a car and a wheel.
   - A car needs a wheel to function correctly, but a wheel doesn't always need a car. It can also be used with the bike, bicycle, or any other vehicles but not a particular car. Here, the wheel object is meaningful even without the car object. Such type of relationship is called UML Aggregation relation.
   - `Car "1" o-- "many" Wheel : aggregation` 
+
+
+## Regexp
+
+
+- search words **not included**: `(?!notincludeword)`, `(?!word\b)`
+
+- search two words accross multiple lines: `(?:\n.*?){0,2}`
+  - `(?:\n.*?)` match anything including line break
+  - `{0,2}` match times range
+  - e.g. search for `class....data` at most 22 lines
+  ```
+  (class.\{)(?:\n.*?){1,22}data
+  ```
 
 
 ## Opensource
