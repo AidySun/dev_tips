@@ -416,6 +416,8 @@ git checkout --ours <conflicted_file>
 
 ## macOS
 
+- monitor a program by its name: [monitor.sh](monitor.sh)
+
 - Use old build system with Xcode 10 and later : `xcodebuild  -UseModernBuildSystem=NO -project xxx`
 
 - Remove download from info:
