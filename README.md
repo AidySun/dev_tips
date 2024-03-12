@@ -1,34 +1,37 @@
 # TOC
 
-1. [Git](#git)
-   1. [show size info of a history file](#show-size-info-of-a-history-file)
-   2. [checkout/reset/revert/clean](#checkoutresetrevertclean)
-   3. [Merge / Conflict](#merge--conflict)
-   4. [stash](#stash)
-   5. [branch](#branch)
-   6. [submodule](#submodule)
-   7. [.git](#git-1)
-   8. [git log](#git-log)
-   9. [tilde(~) caret(^) at-sign(@)](#tilde-caret-at-sign)
-2. [Windows](#windows)
-3. [macOS](#macos)
-4. [Markdown](#markdown)
-5. [Shell](#shell)
-6. [Vim](#vim)
-   1. [tabs](#tabs)
-7. [Python](#python)
-8. [Chrome](#chrome)
-9. [Ubuntu](#ubuntu)
-10. [CentOS](#centos)
-11. [Java](#java)
-12. [CPP](#cpp)
-13. [XPath](#xpath)
-14. [VMWare](#vmware)
-15. [UML](#uml)
-       1. [Class relationship](#class-relationship)
-       2. [Composition v.s. Aggregation](#composition-vs-aggregation)
-16. [Regexp](#regexp)
-17. [Opensource](#opensource)
+- [TOC](#toc)
+  - [Git](#git)
+    - [show size info of a history file](#show-size-info-of-a-history-file)
+    - [checkout/reset/revert/clean](#checkoutresetrevertclean)
+    - [Merge / Conflict](#merge--conflict)
+    - [stash](#stash)
+    - [branch](#branch)
+    - [submodule](#submodule)
+    - [.git](#git-1)
+    - [git log](#git-log)
+    - [tilde(~) caret(^) at-sign(@)](#tilde-caret-at-sign)
+  - [Windows](#windows)
+  - [macOS](#macos)
+  - [Markdown](#markdown)
+  - [Shell](#shell)
+  - [Vim](#vim)
+    - [tabs](#tabs)
+  - [Python](#python)
+  - [Chrome](#chrome)
+  - [Ubuntu](#ubuntu)
+  - [CentOS](#centos)
+  - [Java](#java)
+  - [CPP](#cpp)
+  - [XPath](#xpath)
+  - [VMWare](#vmware)
+  - [JIRA](#jira)
+  - [UML](#uml)
+      - [Class relationship](#class-relationship)
+      - [Composition v.s. Aggregation](#composition-vs-aggregation)
+  - [Regexp](#regexp)
+    - [online tool](#online-tool)
+  - [Opensource](#opensource)
 
 ------
 
@@ -834,6 +837,10 @@ git checkout --ours <conflicted_file>
 - Shortcut to escape VM (on Windows): `Ctrl+Alt`
   - Switch back to vmware with `Alt+Tab` then `Ctrl+g`
 
+## JIRA
+
+- search multiple version with wildcard `*`: `versionMatches("v1.*")`
+  - `issuetype = Bug AND affectedVersion  IN versionMatches("5.15.*")  AND text ~ "binding broken"`
 
 ## UML
 
@@ -870,6 +877,10 @@ git checkout --ours <conflicted_file>
   ```
   (class.\{)(?:\n.*?){1,22}data
   ```
+
+### online tool
+- https://regex101.com/r/BGXRP7/1
+- https://regexr.com/
 
 
 ## Opensource
