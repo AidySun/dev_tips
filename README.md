@@ -1,37 +1,37 @@
 # TOC
 
-- [TOC](#toc)
-  - [Git](#git)
-    - [show size info of a history file](#show-size-info-of-a-history-file)
-    - [checkout/reset/revert/clean](#checkoutresetrevertclean)
-    - [Merge / Conflict](#merge--conflict)
-    - [stash](#stash)
-    - [branch](#branch)
-    - [submodule](#submodule)
-    - [.git](#git-1)
-    - [git log](#git-log)
-    - [tilde(~) caret(^) at-sign(@)](#tilde-caret-at-sign)
-  - [Windows](#windows)
-  - [macOS](#macos)
-  - [Markdown](#markdown)
-  - [Shell](#shell)
-  - [Vim](#vim)
-    - [tabs](#tabs)
-  - [Python](#python)
-  - [Chrome](#chrome)
-  - [Ubuntu](#ubuntu)
-  - [CentOS](#centos)
-  - [Java](#java)
-  - [CPP](#cpp)
-  - [XPath](#xpath)
-  - [VMWare](#vmware)
-  - [JIRA](#jira)
-  - [UML](#uml)
-      - [Class relationship](#class-relationship)
-      - [Composition v.s. Aggregation](#composition-vs-aggregation)
-  - [Regexp](#regexp)
-    - [online tool](#online-tool)
-  - [Opensource](#opensource)
+1. [Git](#git)
+   1. [show size info of a history file](#show-size-info-of-a-history-file)
+   2. [checkout/reset/revert/clean](#checkoutresetrevertclean)
+   3. [Merge / Conflict](#merge--conflict)
+   4. [stash](#stash)
+   5. [branch](#branch)
+   6. [submodule](#submodule)
+   7. [.git](#git-1)
+   8. [git log](#git-log)
+   9. [tilde(~) caret(^) at-sign(@)](#tilde-caret-at-sign)
+   10. [stash file to patches](#stash-file-to-patches)
+2. [Windows](#windows)
+3. [macOS](#macos)
+4. [Markdown](#markdown)
+5. [Shell](#shell)
+6. [Vim](#vim)
+   1. [tabs](#tabs)
+7. [Python](#python)
+8. [Chrome](#chrome)
+9. [Ubuntu](#ubuntu)
+10. [CentOS](#centos)
+11. [Java](#java)
+12. [CPP](#cpp)
+13. [XPath](#xpath)
+14. [VMWare](#vmware)
+15. [JIRA](#jira)
+16. [UML](#uml)
+       1. [Class relationship](#class-relationship)
+       2. [Composition v.s. Aggregation](#composition-vs-aggregation)
+17. [Regexp](#regexp)
+    1. [online tool](#online-tool)
+18. [Opensource](#opensource)
 
 ------
 
@@ -328,6 +328,18 @@ git checkout --ours <conflicted_file>
   - `^` : used on merge commit, HEAD^1 is main branch merged into, HEAD^2 is the side branch merged into main branch.
   - `@` : used for the `git reflog`
 - https://www.golinuxcloud.com/git-head-caret-vs-tilde-at-sign-examples/#:~:text=The%20tilde%20%28~%29%2C%20caret%20%28%5E%29%20and%20at-sign%20%28%40%29,refer%20to%20the%20parent%20of%20that%20particular%20commit.
+
+### stash file to patches
+
+```shell
+git stash list | while read stash; do
+    index=$(echo "$stash" | cut -d: -f1 |cut -d'}' -f1 | cut -d'{' -f2)
+    echo $index
+    git stash show -p "$index" > "stash_$index.patch"
+done
+# in target repo:
+# git apply xxx.patch
+```
 
 ## Windows
 
