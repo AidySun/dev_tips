@@ -32,6 +32,9 @@
 17. [Regexp](#regexp)
     1. [online tool](#online-tool)
 18. [Opensource](#opensource)
+19. [Tools](#tools)
+    1. [vscode](#vscode)
+       1. [search multiple line](#search-multiple-line)
 
 ------
 
@@ -901,3 +904,11 @@ done
   - https://ometer.com/parallel.html
 
 
+## Tools
+
+### vscode
+
+#### search multiple line
+
+- serach content matchs "Button" & "background" appears within 10 lines
+`Button.*(?:\n.*(?:\n.*)){0,10}.*background`
