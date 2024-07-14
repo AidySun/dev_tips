@@ -1,16 +1,17 @@
 # TOC
 
 1. [Git](#git)
-   1. [show size info of a history file](#show-size-info-of-a-history-file)
-   2. [checkout/reset/revert/clean](#checkoutresetrevertclean)
-   3. [Merge / Conflict](#merge--conflict)
-   4. [stash](#stash)
-   5. [branch](#branch)
-   6. [submodule](#submodule)
-   7. [.git](#git-1)
-   8. [git log](#git-log)
-   9. [tilde(~) caret(^) at-sign(@)](#tilde-caret-at-sign)
-   10. [stash file to patches](#stash-file-to-patches)
+   1. [line break settings](#line-break-settings)
+   2. [show size info of a history file](#show-size-info-of-a-history-file)
+   3. [checkout/reset/revert/clean](#checkoutresetrevertclean)
+   4. [Merge / Conflict](#merge--conflict)
+   5. [stash](#stash)
+   6. [branch](#branch)
+   7. [submodule](#submodule)
+   8. [.git](#git-1)
+   9. [git log](#git-log)
+   10. [tilde(~) caret(^) at-sign(@)](#tilde-caret-at-sign)
+   11. [stash file to patches](#stash-file-to-patches)
 2. [Windows](#windows)
 3. [macOS](#macos)
 4. [Markdown](#markdown)
@@ -39,6 +40,18 @@
 ------
 
 ## Git
+
+### line break settings
+
+- On Windows:
+
+`git config --global core.autocrlf true`
+This setting converts LF to CRLF when checking out text files and converts CRLF to LF when committing.
+
+- On macOS and Linux:
+
+`git config --global core.autocrlf input`
+This setting converts CRLF to LF when committing, but does not modify the line endings when checking out files.
 
 ### show size info of a history file
 There is a file A, I want to check its size in version HEAD~2:
