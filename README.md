@@ -36,6 +36,7 @@
 19. [Tools](#tools)
     1. [vscode](#vscode)
        1. [search multiple line](#search-multiple-line)
+    2. [compress video](#compress-video)
 
 ------
 
@@ -925,3 +926,10 @@ done
 
 - serach content matchs "Button" & "background" appears within 10 lines
 `Button.*(?:\n.*(?:\n.*)){0,10}.*background`
+
+### compress video
+```shell
+ffmpeg -i "input.mp4" -c:v libx264 -tag:v avc1 -movflags faststart -crf 30 -preset superfast "output.mp4"
+```
+
+- https://tools.rotato.app/compress
