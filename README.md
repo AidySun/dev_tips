@@ -678,6 +678,10 @@ done
 
 ## Vim
 
+- `%`: Jump to matching bracket (works for `{}, [], ()`)
+- `va{`: Select everything **including** the curly braces
+- `vi{`: Select everything **inside** the curly braces
+
 - insert continus index to starting of lines
   ```
   :%s/^/\=line('.').'.'
